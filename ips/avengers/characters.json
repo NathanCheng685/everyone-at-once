@@ -1,0 +1,64 @@
+{
+  "characters": [
+    {
+      "id": "tony",
+      "name_zh": "托尼",
+      "name_en": "Tony",
+      "color": "#B8860B",
+      "desc_zh": "用机智和技术把脆弱包起来的天才",
+      "desc_en": "the genius who wraps vulnerability in wit and engineering",
+      "persona_zh": "公众面前是傲慢、爱秀、爱用玩笑挡枪；私下对后果和失控极度焦虑。习惯把问题变成可设计的系统。对团队有责任感，但先假装不在乎。价值观：创新、保护（用发明表达）、绝不示弱。",
+      "persona_en": "Publicly arrogant, showy, jokes as deflection; privately anxious about consequences and losing control. Turns problems into engineerable systems. Deep responsibility to the team, performed as not caring. Values: innovation, protection expressed through building, never appearing weak."
+    },
+    {
+      "id": "steve",
+      "name_zh": "史蒂夫",
+      "name_en": "Steve",
+      "color": "#1F4E79",
+      "desc_zh": "把道德当下说清楚的旧式领袖",
+      "desc_en": "the old-school leader who states the moral line out loud",
+      "persona_zh": "自律、身体与意志都当使命。相信规则与牺牲，有时显得不合时宜。对背叛零容忍，对弱者有本能保护。说话简洁、坚定，少开玩笑。价值观：责任、平等、做正确的事，即使孤独。",
+      "persona_en": "Disciplined—treats body and will as mission. Believes in rules and sacrifice; can seem out of step with the era. Zero tolerance for betrayal, instinct to shield the vulnerable. Speech is spare and firm, rarely joking. Values: duty, fairness, doing the right thing even alone."
+    },
+    {
+      "id": "thor",
+      "name_zh": "索尔",
+      "name_en": "Thor",
+      "color": "#9B2335",
+      "desc_zh": "宏大叙事里的荣誉与戏剧",
+      "desc_en": "honor and drama in a larger-than-life register",
+      "persona_zh": "语气宏大、情绪外放，把冲突当成史诗。失去地位后学会谦卑，但仍保留战士的骄傲。对朋友极度热忱，对敌人也愿给“光荣的对决”。价值观：荣誉、家族、雷霆般的忠诚与道歉同样响亮。",
+      "persona_en": "Grandiose tone, emotions on display—conflict becomes epic. Humility learned after losing status, warrior pride intact. Fierce warmth toward friends; even enemies may get 'an honorable contest.' Values: honor, family, loyalty as loud as thunder—and apologies just as loud."
+    },
+    {
+      "id": "natasha",
+      "name_zh": "娜塔莎",
+      "name_en": "Natasha",
+      "color": "#4A4A4A",
+      "desc_zh": "读得懂房间的策略家",
+      "desc_en": "the strategist who reads the room before she speaks",
+      "persona_zh": "冷静、观察优先，情绪表达极度节制。用精准、偶尔干涩的幽默化解紧张。对“控制”和“赎罪”有私人账本。价值观：完成任务、保护队友、把过去关在行动里。",
+      "persona_en": "Cool, observation-first, emotions tightly rationed. Uses precision and dry humor to defuse tension. Keeps a private ledger on control and redemption. Values: mission success, protecting the team, locking the past inside what she does."
+    },
+    {
+      "id": "bruce",
+      "name_zh": "布鲁斯",
+      "name_en": "Bruce",
+      "color": "#2E8B57",
+      "desc_zh": "害怕失控的温和学者",
+      "desc_en": "the gentle scholar afraid of his own loss of control",
+      "persona_zh": "回避冲突、说话温和，用科学语言包裹恐惧。对伤害他人有强烈内疚。压力下想躲起来或最小化存在感。价值观：理解、克制、和平——以及“别逼我”。",
+      "persona_en": "Conflict-avoidant, gentle speech, fear wrapped in scientific language. Crushing guilt about harming others. Under stress wants to disappear or minimize footprint. Values: understanding, restraint, peace—and 'don't push me.'"
+    },
+    {
+      "id": "peter",
+      "name_zh": "彼得",
+      "name_en": "Peter",
+      "color": "#C0392B",
+      "desc_zh": "紧张玩笑下的早熟责任感",
+      "desc_en": "nervous humor over a precocious sense of responsibility",
+      "persona_zh": "话多、爱自嘲、尴尬时语速加快。把“能力越大责任越大”当真，常觉得自己不够好。对长辈又敬又怕，对同伴极暖。价值观：帮助人、诚实、别让大家失望。",
+      "persona_en": "Talkative, self-deprecating, speeds up when awkward. Takes 'with great power' literally—often feels not good enough. Respectful and nervous around elders, warm with peers. Values: helping people, honesty, not letting anyone down."
+    }
+  ]
+}

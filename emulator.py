@@ -8,16 +8,14 @@ The emulator turns the intractable LLM likelihood into an explicit, cheap,
 vectorized function P(option | question, theta) — the basis for Bayesian inference.
 """
 import warnings
-from pathlib import Path
-
 import numpy as np
+
+from ip_loader import artifacts_dir
 from sklearn.exceptions import ConvergenceWarning
 from sklearn.gaussian_process import GaussianProcessRegressor
 from sklearn.gaussian_process.kernels import ConstantKernel as C
 from sklearn.gaussian_process.kernels import RBF, WhiteKernel
 
-ROOT = Path(__file__).resolve().parent
-ARTIFACTS = ROOT / "artifacts"
 N_QS = 12
 EPS = 0.02  # floor so log-ratios stay finite (LLM probs are rounded, can hit 0)
 
@@ -42,8 +40,9 @@ def inv_alr(y):
 
 
 class ResponseEmulator:
-    def __init__(self, lang="zh"):
+    def __init__(self, lang="zh", ip_id="friends"):
         self.lang = lang
+        self.ip_id = ip_id
         self.gprs = None
         self.thetas = None
         self.probs = None
@@ -64,7 +63,7 @@ class ResponseEmulator:
 
     def fit(self, npz_path=None):
         if npz_path is None:
-            npz_path = ARTIFACTS / f"response_surface_{self.lang}.npz"
+            npz_path = artifacts_dir(self.ip_id) / f"response_surface_{self.lang}.npz"
         data = np.load(npz_path, allow_pickle=True)
         self.thetas = data["thetas"]            # (N, 6)
         self.probs = data["probs"]              # (N, 12, 3)
@@ -104,7 +103,7 @@ class ResponseEmulator:
 def corner_report(emu, sanity_path=None):
     """Compare emulator at one-hot corners vs the sanity tensor (sanity check)."""
     if sanity_path is None:
-        sanity_path = ARTIFACTS / "sanity_tensor.npy"
+        sanity_path = artifacts_dir(emu.ip_id) / "sanity_tensor.npy"
     tensor = np.load(sanity_path)               # (6, 12, 2, 3)
     li = ["zh", "en"].index(emu.lang)
     corners = np.eye(6)

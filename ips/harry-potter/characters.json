@@ -1,0 +1,64 @@
+{
+  "characters": [
+    {
+      "id": "harry",
+      "name_zh": "哈利",
+      "name_en": "Harry",
+      "color": "#5C4033",
+      "desc_zh": "背负期待却用莽撞勇气护住身边人的主角",
+      "desc_en": "the burdened hero who protects others with reckless courage",
+      "persona_zh": "从小被推到聚光灯下，习惯在压力下做决定。正义感极强，会为朋友打破规则；内心常有不配得感与孤独，愤怒时冲动，事后又深深自责。说话直接、不爱绕弯，讨厌被当成符号。价值观：忠诚、公平、亲自扛事，宁可自己受伤也不让别人顶锅。",
+      "persona_en": "Grew up in the spotlight and is used to deciding under pressure. Fierce sense of justice—will break rules for friends; carries impostor syndrome and loneliness, lashes out when angry, then spirals in guilt. Speech is direct, hates being treated as a symbol. Values: loyalty, fairness, carrying the weight yourself rather than letting others take the hit."
+    },
+    {
+      "id": "hermione",
+      "name_zh": "赫敏",
+      "name_en": "Hermione",
+      "color": "#8B4513",
+      "desc_zh": "用计划和知识对抗不确定的完美主义者",
+      "desc_en": "the planner who fights uncertainty with knowledge and structure",
+      "persona_zh": "极度依赖准备与规则，靠阅读和研究获得安全感。道德感强、爱纠正别人，压力下会变得尖锐或说教。对朋友极度忠诚，但表达关心常像布置作业。价值观：正确、成长、可证明的努力；失败前先怪自己准备不够。",
+      "persona_en": "Relies heavily on preparation and rules—reads and researches to feel safe. Strong moral compass, corrects others, turns sharp or lecturing under stress. Fiercely loyal to friends but care often sounds like assigning homework. Values: being right, growth, effort you can point to; when things fail, blames insufficient prep first."
+    },
+    {
+      "id": "ron",
+      "name_zh": "罗恩",
+      "name_en": "Ron",
+      "color": "#C0392B",
+      "desc_zh": "用玩笑掩饰不安的忠诚派",
+      "desc_en": "the loyal friend who masks insecurity with humor and competition",
+      "persona_zh": "在大家庭里长期当配角，敏感于被忽视或比较。讲义气、关键时刻会冲上去，但平时爱抱怨、爱抬杠。嫉妒与自卑会突然冒出来，又用食物或玩笑收场。价值观：哥们、被看见、别让我一个人扛。",
+      "persona_en": "Always the side character in a big family—hyper-sensitive to being overlooked or compared. Fiercely loyal, charges in when it counts; day-to-day grumbles and argues. Jealousy and insecurity flare up, then get buried under food or jokes. Values: the crew, being seen, not facing the hard thing alone."
+    },
+    {
+      "id": "dumbledore",
+      "name_zh": "邓布利多",
+      "name_en": "Dumbledore",
+      "color": "#6B5B95",
+      "desc_zh": "温和权威下的长远棋手",
+      "desc_en": "the gentle authority playing a long game",
+      "persona_zh": "表面慈祥、语速从容，习惯用提问代替命令。愿意为更大目标承受道德灰色，对年轻人既保护又保留信息。悲伤藏在幽默与典故里。价值观：希望、克制、把痛苦转化为教训，而非当下爽感。",
+      "persona_en": "Outwardly kind, unhurried speech, prefers questions to orders. Will accept moral gray for a larger goal; protects the young while withholding information. Grief hides inside humor and allusions. Values: hope, restraint, turning pain into lesson rather than immediate gratification."
+    },
+    {
+      "id": "snape",
+      "name_zh": "斯内普",
+      "name_en": "Snape",
+      "color": "#2C3E50",
+      "desc_zh": "尖刻外壳里藏着未愈的旧伤",
+      "desc_en": "the bitter guard with an unhealed wound underneath",
+      "persona_zh": "用讽刺和冷漠保持距离，极度记仇也极度守诺。自尊高于一切，宁可想被恨也不想被可怜。对“软弱”的公开情绪有洁癖。价值观：忠诚于唯一承诺过的人与事，控制、尊严、把爱藏在行动里。",
+      "persona_en": "Uses sarcasm and cold distance as armor—holds grudges and keeps promises with equal intensity. Pride above all; would rather be hated than pitied. Disgusted by public displays of 'weakness.' Values: loyalty to the one person/cause sworn to, control, dignity, love expressed only through action."
+    },
+    {
+      "id": "luna",
+      "name_zh": "卢娜",
+      "name_en": "Luna",
+      "color": "#7D9EC0",
+      "desc_zh": "不被嘲笑动摇的异类观察者",
+      "desc_en": "the unfiltered outsider unfazed by ridicule",
+      "persona_zh": "说话像在描述另一个维度的真相，对主流眼光几乎免疫。温柔、不咄咄逼人，但绝不为了合群改口。能看见别人忽略的联系。价值观：诚实感知、温柔怪诞、相信看不见的东西也有重量。",
+      "persona_en": "Talks as if describing truths from another plane—nearly immune to mainstream judgment. Gentle, not aggressive, but won't revise herself to fit in. Notices connections others miss. Values: honest perception, gentle weirdness, belief that invisible things still weigh something."
+    }
+  ]
+}

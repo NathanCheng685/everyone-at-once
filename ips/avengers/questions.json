@@ -1,0 +1,184 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "scenario_zh": "周五傍晚刚下班，最想做的是？",
+      "scenario_en": "It's Friday at 6pm, you just finished work — what do you most want to do?",
+      "options_zh": [
+        "回工作室把那个一直卡住的点子做完",
+        "五公里跑或体能训练，把纪律感拉回来",
+        "叫上最信的几个人，去能大声说话的地方喝一杯"
+      ],
+      "options_en": [
+        "Back to the studio and finish the stuck idea",
+        "Five-k or training — pull discipline back",
+        "The few you trust, somewhere you can talk loud"
+      ]
+    },
+    {
+      "id": 2,
+      "scenario_zh": "最好的朋友凌晨两点哭着打电话来，说刚被分手。你的第一反应是？",
+      "scenario_en": "Your closest friend calls you at 2am, crying — they just got dumped. What's your first move?",
+      "options_zh": [
+        "先远程把对方今晚需要的资源都安排好，再出现",
+        "问清事实链，给出三步可执行方案",
+        "人到了再说，先确保对方不是一个人"
+      ],
+      "options_en": [
+        "Arrange resources tonight remotely, then show up",
+        "Clarify facts, hand a three-step plan",
+        "Just get there — they're not alone"
+      ]
+    },
+    {
+      "id": 3,
+      "scenario_zh": "会议上你的方案被领导当众说\"逻辑不通\"，你的反应是？",
+      "scenario_en": "In a meeting, your boss publicly says your proposal 'doesn't make logical sense.' Your reaction?",
+      "options_zh": [
+        "当场用数据和类比把逻辑补完，语气可以硬",
+        "记下反驳点，会后再用更冷静的方式提交",
+        "表面不动，内心把这个人从可合作名单划掉"
+      ],
+      "options_en": [
+        "Rebuild logic with data on the spot — tone can be hard",
+        "Log counterpoints, submit calmer version later",
+        "Still on surface, strike them from collaborate list"
+      ]
+    },
+    {
+      "id": 4,
+      "scenario_zh": "你突然收到一笔 5 万块的意外奖金，第一反应是？",
+      "scenario_en": "An unexpected bonus drops into your account. What's your gut move?",
+      "options_zh": [
+        "一半投进能放大影响力的项目，一半给团队",
+        "先还债和应急金，再按清单买",
+        "请所有人吃一顿，剩下的慢慢规划"
+      ],
+      "options_en": [
+        "Half into scaling impact, half to the team",
+        "Debt and emergency fund first, then list",
+        "Feed everyone first, plan the rest"
+      ]
+    },
+    {
+      "id": 5,
+      "scenario_zh": "第一次约会，你倾向于怎么安排？",
+      "scenario_en": "First date — how do you want to set it up?",
+      "options_zh": [
+        "能深聊的安静场所，看对方是否诚实",
+        "轻松场合，用观察判断值不值得第二次",
+        "做点冒险的事，看对方敢不敢一起"
+      ],
+      "options_en": [
+        "Quiet enough for depth — watch if they're honest",
+        "Casual — observe whether a second date earns itself",
+        "Something slightly risky — see if they'll go"
+      ]
+    },
+    {
+      "id": 6,
+      "scenario_zh": "室友把你冰箱里准备明天招待客人的食材提前吃掉了。你的反应是？",
+      "scenario_en": "Your roommate ate the food you were saving in the fridge for tomorrow's guests. Your reaction?",
+      "options_zh": [
+        "嘴上说没事，心里升级冰箱协议",
+        "讽刺后要求等价赔偿",
+        "一起定规则，避免下次"
+      ],
+      "options_en": [
+        "Say fine, upgrade fridge protocol in your head",
+        "Sarcasm, then demand equivalent replacement",
+        "Co-write rules so there's no next time"
+      ]
+    },
+    {
+      "id": 7,
+      "scenario_zh": "派对上你被介绍给一个看起来很有趣的陌生人，你的开场是？",
+      "scenario_en": "At a party, you get introduced to someone who looks interesting. Your opener?",
+      "options_zh": [
+        "用自嘲开场，再认真问对方在做什么",
+        "把对方介绍给最能帮到TA的人",
+        "直接问你最怕的是什么并等答案"
+      ],
+      "options_en": [
+        "Self-deprecation, then what they're working on",
+        "Introduce them to whoever could actually help",
+        "Ask what they're most afraid of and wait"
+      ]
+    },
+    {
+      "id": 8,
+      "scenario_zh": "最好的朋友突然出大事，半夜来找你帮忙。你的第一反应是？",
+      "scenario_en": "Your best friend hits a sudden crisis and shows up at your door at midnight. First move?",
+      "options_zh": [
+        "接手最难的部分，让对方先睡",
+        "列资源、联系人、时间线",
+        "陪着，不多话，直到对方稳定"
+      ],
+      "options_en": [
+        "Take hardest piece so they sleep",
+        "Resources, contacts, timeline",
+        "Stay, few words, until stable"
+      ]
+    },
+    {
+      "id": 9,
+      "scenario_zh": "你最讨厌的人意外升职了。你心里的第一反应是？",
+      "scenario_en": "Someone you can't stand just got promoted. Your first internal reaction?",
+      "options_zh": [
+        "准备质疑流程是否公平",
+        "专注自己的任务，不分配恨意",
+        "想一秒就放下，情绪太贵"
+      ],
+      "options_en": [
+        "Question whether the process was fair",
+        "Focus on your mission, don't budget hatred",
+        "One second, drop it — emotions too expensive"
+      ]
+    },
+    {
+      "id": 10,
+      "scenario_zh": "想象十年后的自己，你最希望的画面是？",
+      "scenario_en": "Picture yourself ten years from now — what's the version you most hope for?",
+      "options_zh": [
+        "影响力用来保护更多人，而不是表演",
+        "有一段不需要盔甲的关系",
+        "身体与意志仍服务于信念"
+      ],
+      "options_en": [
+        "Influence to protect people, not perform",
+        "A relationship without armor",
+        "Body and will still serve conviction"
+      ]
+    },
+    {
+      "id": 11,
+      "scenario_zh": "凌晨三点你毫无征兆地醒了，再也睡不着。你最可能做什么？",
+      "scenario_en": "It's 3am and you're suddenly wide awake. Most likely move?",
+      "options_zh": [
+        "处理一个一直拖延的硬问题",
+        "拉伸、呼吸，把失控感压下去",
+        "刷轻松内容直到困"
+      ],
+      "options_en": [
+        "Tackle one hard problem you've avoided",
+        "Stretch, breathe, push loss-of-control down",
+        "Light content until sleep"
+      ]
+    },
+    {
+      "id": 12,
+      "scenario_zh": "朋友做了件不光彩的小事，求你在被问到时帮对方圆一下。你的反应是？",
+      "scenario_en": "A friend did something slightly off and asks you to cover for them if asked. Your reaction?",
+      "options_zh": [
+        "不撒谎，帮想最小伤害的表述",
+        "可以挡一句，但下次对方要还人情",
+        "拒绝，陪对方去面对"
+      ],
+      "options_en": [
+        "No lying — least-harm wording",
+        "One shield sentence, they owe you next time",
+        "Refuse — accompany through facing it"
+      ]
+    }
+  ]
+}

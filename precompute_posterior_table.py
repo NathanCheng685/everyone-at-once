@@ -19,13 +19,14 @@ from pathlib import Path
 import numpy as np
 
 from emulator import ResponseEmulator
+from ip_loader import artifacts_dir
 
-ARTIFACTS = Path(__file__).resolve().parent / "artifacts"
 N_CHARS = 6
 
 
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("--ip", default="friends", help="IP id (folder under ips/)")
     ap.add_argument("--lang", default="zh", choices=["zh", "en"])
     ap.add_argument("--pool", type=int, default=150000, help="theta pool size")
     ap.add_argument("--alpha", type=float, default=0.5, help="Dirichlet prior conc.")
@@ -33,9 +34,9 @@ def main():
     ap.add_argument("--batch", type=int, default=20000)
     args = ap.parse_args()
 
-    print(f"=== precompute_posterior_table ({args.lang}) ===")
+    print(f"=== precompute_posterior_table ip={args.ip} lang={args.lang} ===")
     t0 = time.time()
-    emu = ResponseEmulator(args.lang).fit()
+    emu = ResponseEmulator(args.lang, ip_id=args.ip).fit()
     print(f"emulator fit on {emu.thetas.shape[0]} thetas ({time.time()-t0:.0f}s)")
 
     rng = np.random.default_rng(args.seed)
@@ -48,7 +49,7 @@ def main():
         probs[s:e] = emu.predict_all(theta[s:e]).astype(np.float32)
         print(f"  emulated {e}/{args.pool}  ({time.time()-t1:.0f}s)", flush=True)
 
-    out = ARTIFACTS / f"infer_table_{args.lang}.npz"
+    out = artifacts_dir(args.ip) / f"infer_table_{args.lang}.npz"
     np.savez(out, theta=theta.astype(np.float32), probs=probs,
              alpha=args.alpha, seed=args.seed, lang=args.lang)
     print(f"\nsaved {args.pool}-persona table -> {out.name}  "

@@ -8,19 +8,20 @@ from pathlib import Path
 
 import numpy as np
 
-from prompts import CHARACTERS
+from ip_loader import artifacts_dir, load_characters
 
-ARTIFACTS = Path(__file__).resolve().parent / "artifacts"
 N_CHARS = 6
 
 
 class PosteriorEngine:
-    def __init__(self, lang):
+    def __init__(self, ip_id, lang):
+        self.ip_id = ip_id
         self.lang = lang
-        path = ARTIFACTS / f"infer_table_{lang}.npz"
+        self.characters = load_characters(ip_id)
+        path = artifacts_dir(ip_id) / f"infer_table_{lang}.npz"
         if not path.exists():
             raise FileNotFoundError(
-                f"missing {path.name}; run precompute_posterior_table.py --lang {lang}"
+                f"missing {path}; run precompute_posterior_table.py --ip {ip_id} --lang {lang}"
             )
         d = np.load(path)
         self.theta = d["theta"].astype(np.float64)            # (P, 6)
@@ -49,18 +50,24 @@ class PosteriorEngine:
         q05, q95 = np.percentile(post, [5, 95], axis=0)
 
         order = np.argsort(mean)[::-1]
-        mix = [
-            {
-                "id": CHARACTERS[c]["id"],
-                "name_en": CHARACTERS[c]["name_en"],
-                "name_zh": CHARACTERS[c]["name_zh"],
+        mix = []
+        for c in order:
+            ch = self.characters[c]
+            entry = {
+                "id": ch["id"],
+                "name_en": ch["name_en"],
+                "name_zh": ch["name_zh"],
                 "mean": round(float(mean[c]), 4),
                 "lo": round(float(q05[c]), 4),
                 "hi": round(float(q95[c]), 4),
             }
-            for c in order
-        ]
+            if ch.get("color"):
+                entry["color"] = ch["color"]
+            if ch.get(f"desc_{self.lang}"):
+                entry["desc"] = ch[f"desc_{self.lang}"]
+            mix.append(entry)
         return {
+            "ip": self.ip_id,
             "lang": self.lang,
             "mix": mix,
             "ess": round(ess, 1),

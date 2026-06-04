@@ -125,23 +125,16 @@
   <div class="footer">Probabilistic personality mixes · inferred from your answers</div>
 
 <script>
-const CHAR_COLOR = {ross:'var(--ross)',rachel:'var(--rachel)',monica:'var(--monica)',
+const FRIENDS_COLOR = {ross:'var(--ross)',rachel:'var(--rachel)',monica:'var(--monica)',
   chandler:'var(--chandler)',joey:'var(--joey)',phoebe:'var(--phoebe)'};
-const charImg = (id)=> '/img/'+id+'.png';
-const DESC = {
-  en:{ross:"the over-analyzing romantic who has to be right",
-    rachel:"the reinventor chasing a better version of herself",
-    monica:"the competitive perfectionist who runs the show",
-    chandler:"the deflect-with-a-joke loyalist",
-    joey:"the big-hearted, food-first ride-or-die",
-    phoebe:"the unfiltered free spirit with her own cosmos"},
-  zh:{ross:"凡事要争对、爱钻牛角尖的浪漫主义者",
-    rachel:"不断重塑、追求更好自己的人",
-    monica:"掌控全局的好胜完美主义者",
-    chandler:"用段子当盾牌的忠诚伙伴",
-    joey:"重情义、美食至上的铁哥们",
-    phoebe:"活在自己宇宙里的率真自由灵魂"}
+let CHAR_META = {};
+const charColor = (id)=> CHAR_META[id]?.color || FRIENDS_COLOR[id] || 'var(--accent)';
+const charImg = (id)=> {
+  if(!curIP) return '/img/'+id+'.png';
+  if(curIP.id==='friends') return '/img/'+id+'.png';
+  return '/img/'+curIP.id+'/'+id+'.png';
 };
+const charDesc = (id)=> CHAR_META[id]?.desc || '';
 const T = {
   en:{begin:"Begin", q:"Question", of:"of", back:"Back", retake:"Retake another world",
     home_h:"Which characters<br>live in you?",
@@ -246,8 +239,12 @@ async function submitIP(){
 
 async function openIP(ip){
   curIP=ip;
-  const d=await (await fetch('/api/questions?lang='+LANG)).json();
+  document.documentElement.style.setProperty('--accent', ip.accent||'#C8553D');
+  const d=await (await fetch('/api/questions?ip='+encodeURIComponent(ip.id)+'&lang='+LANG)).json();
+  if(d.error){ alert(d.error); home(); return; }
   QS=d.questions; ANS=new Array(QS.length).fill(null); idx=0;
+  CHAR_META = {};
+  (d.characters||[]).forEach(c=>{ CHAR_META[c.id]={color:c.color, desc:c.desc}; });
   question();
 }
 
@@ -300,12 +297,12 @@ function result(res){
         <div class="subverdict">${Math.round(top.mean*100)}% · ${t.with} ${nm(second)} (${Math.round(second.mean*100)}%)</div>
       </div>
     </div>
-    <div class="descline">${DESC[LANG][top.id]}</div>
+    <div class="descline">${top.desc||charDesc(top.id)}</div>
     <div class="bars"></div>
     <div class="note">${conf}</div>
     <div class="navrow" style="justify-content:center"><button class="btn ghost" id="retake">${t.retake}</button></div>
   </div></div>`);
-  fallback(v.querySelector('.avatar'), CHAR_COLOR[top.id]);
+  fallback(v.querySelector('.avatar'), charColor(top.id));
   const bars=v.querySelector('.bars');
   mix.forEach(m=>{
     const pct=Math.round(m.mean*100);
@@ -313,10 +310,10 @@ function result(res){
       <img class="av" alt="${nm(m)}" src="${charImg(m.id)}">
       <div class="col">
         <div class="row"><span class="nm">${nm(m)}</span><span class="pct">${pct}%</span></div>
-        <div class="track"><span class="fill" style="background:${CHAR_COLOR[m.id]}"></span></div>
+        <div class="track"><span class="fill" style="background:${m.color||charColor(m.id)}"></span></div>
       </div>
     </div>`);
-    fallback(b.querySelector('.av'), CHAR_COLOR[m.id]);
+    fallback(b.querySelector('.av'), charColor(m.id));
     bars.appendChild(b);
     requestAnimationFrame(()=>{ b.querySelector('.fill').style.width=Math.max(2,m.mean*100)+'%'; });
   });

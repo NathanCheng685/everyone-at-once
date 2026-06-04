@@ -26,12 +26,10 @@ from pathlib import Path
 
 import numpy as np
 
-from prompts import CHARACTERS, QUESTIONS
+from ip_loader import artifacts_dir, load_questions
 from simulator import client, simulate, SimulatorError
 
 ROOT = Path(__file__).resolve().parent
-ARTIFACTS = ROOT / "artifacts"
-ARTIFACTS.mkdir(exist_ok=True)
 
 N_CHARS = 6
 N_QS = 12
@@ -90,9 +88,10 @@ def preflight():
         return False
 
 
-def consolidate(lang):
+def consolidate(ip_id, lang):
     """Rebuild the .npz surface from the JSONL checkpoint (no LLM calls)."""
-    jsonl = ARTIFACTS / f"response_surface_{lang}.jsonl"
+    adir = artifacts_dir(ip_id)
+    jsonl = adir / f"response_surface_{lang}.jsonl"
     done = load_done(jsonl)
     if not done:
         print("nothing to consolidate.")
@@ -100,9 +99,9 @@ def consolidate(lang):
     idx_sorted = sorted(done)
     theta_arr = np.stack([done[i][0] for i in idx_sorted])
     probs = np.stack([done[i][1] for i in idx_sorted])
-    qids = [q["id"] for q in QUESTIONS]
+    qids = [q["id"] for q in load_questions(ip_id)]
     np.savez(
-        ARTIFACTS / f"response_surface_{lang}.npz",
+        adir / f"response_surface_{lang}.npz",
         thetas=theta_arr, probs=probs, qids=np.array(qids), lang=lang,
     )
     return probs.shape[0]
@@ -110,6 +109,7 @@ def consolidate(lang):
 
 def main():
     ap = argparse.ArgumentParser()
+    ap.add_argument("--ip", default="friends", help="IP id (folder under ips/)")
     ap.add_argument("--n", type=int, default=48)
     ap.add_argument("--lang", default="zh", choices=LANGS)
     ap.add_argument("--workers", type=int, default=4)
@@ -120,17 +120,19 @@ def main():
     args = ap.parse_args()
 
     if args.consolidate_only:
-        m = consolidate(args.lang)
-        print(f"consolidated {m} thetas -> artifacts/response_surface_{args.lang}.npz")
+        m = consolidate(args.ip, args.lang)
+        print(f"consolidated {m} thetas -> artifacts/{args.ip}/response_surface_{args.lang}.npz")
         return 0
 
     thetas = design_thetas(args.n, args.alpha, args.seed)
     n = len(thetas)
-    qids = [q["id"] for q in QUESTIONS]
-    jsonl = ARTIFACTS / f"response_surface_{args.lang}.jsonl"
+    qids = [q["id"] for q in load_questions(args.ip)]
+    adir = artifacts_dir(args.ip)
+    jsonl = adir / f"response_surface_{args.lang}.jsonl"
 
     print("=== build_response_surface ===")
-    print(f"n={n}  lang={args.lang}  workers={args.workers}  alpha={args.alpha}  seed={args.seed}")
+    print(f"ip={args.ip}  n={n}  lang={args.lang}  workers={args.workers}  "
+          f"alpha={args.alpha}  seed={args.seed}")
     print(f"checkpoint -> {jsonl.name}\n")
 
     if not preflight():
@@ -152,7 +154,7 @@ def main():
 
     def work(t):
         i, qi, qid = t
-        return i, qi, simulate(thetas[i], qid, args.lang)
+        return i, qi, simulate(thetas[i], qid, args.lang, args.ip)
 
     t0 = time.time()
     completed_theta = 0
@@ -185,15 +187,15 @@ def main():
                         print(f"  theta {completed_theta}/{len(todo_idx)}  "
                               f"({el:.0f}s, ETA {eta:.0f}s)", flush=True)
                     if completed_theta % 25 == 0:  # crash-safe periodic save
-                        consolidate(args.lang)
+                        consolidate(args.ip, args.lang)
 
     if failed_theta:
         print(f"\nWARNING: {len(failed_theta)} thetas had failures "
               f"({n_call_fail} calls); they were NOT saved and will retry on resume.")
 
-    m = consolidate(args.lang)
+    m = consolidate(args.ip, args.lang)
     print(f"\nsaved surface: {m} thetas x {N_QS} q x 3  "
-          f"-> artifacts/response_surface_{args.lang}.npz")
+          f"-> artifacts/{args.ip}/response_surface_{args.lang}.npz")
     if failed_theta:
         print("re-run the same command once the ROG box is reachable to fill the rest.")
     return 0

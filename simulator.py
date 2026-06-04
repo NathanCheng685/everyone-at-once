@@ -54,7 +54,7 @@ def _parse_probs(content):
     return p / s  # renormalize to be exactly on the simplex
 
 
-def simulate(theta, question_id, lang, _retry=0):
+def simulate(theta, question_id, lang, ip_id="friends", _retry=0):
     """One simulator call. Returns numpy array shape (3,).
 
     Retries up to MAX_RETRIES on both parse/shape errors and transient network
@@ -65,8 +65,8 @@ def simulate(theta, question_id, lang, _retry=0):
         resp = client.chat.completions.create(
             model=SIMULATOR_MODEL,
             messages=[
-                {"role": "system", "content": build_system_prompt(theta, lang)},
-                {"role": "user",   "content": build_user_prompt(question_id, lang)},
+                {"role": "system", "content": build_system_prompt(theta, lang, ip_id)},
+                {"role": "user",   "content": build_user_prompt(question_id, lang, ip_id)},
             ],
             temperature=0.7,
             response_format={"type": "json_object"},
@@ -77,15 +77,15 @@ def simulate(theta, question_id, lang, _retry=0):
     except RETRYABLE_NET as e:
         if _retry < MAX_RETRIES:
             time.sleep(min(2 ** _retry, 15))  # backoff: 1,2,4,8,15s
-            return simulate(theta, question_id, lang, _retry + 1)
+            return simulate(theta, question_id, lang, ip_id, _retry + 1)
         raise SimulatorError(
-            f"network failure after {MAX_RETRIES} retries: q={question_id}, "
+            f"network failure after {MAX_RETRIES} retries: ip={ip_id}, q={question_id}, "
             f"lang={lang}, err={type(e).__name__}: {e}"
         ) from e
     except (json.JSONDecodeError, ValueError, KeyError, TypeError) as e:
         if _retry < MAX_RETRIES:
-            return simulate(theta, question_id, lang, _retry + 1)
+            return simulate(theta, question_id, lang, ip_id, _retry + 1)
         raise SimulatorError(
-            f"parse failure after {MAX_RETRIES} retries: q={question_id}, "
+            f"parse failure after {MAX_RETRIES} retries: ip={ip_id}, q={question_id}, "
             f"lang={lang}, err={e}"
         ) from e

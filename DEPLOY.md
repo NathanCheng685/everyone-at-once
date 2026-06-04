@@ -2,7 +2,7 @@
 
 ## What gets deployed (~50 MB)
 
-- Flask app + precomputed `artifacts/infer_table_en.npz` & `infer_table_zh.npz`
+- Flask app + precomputed `artifacts/<ip>/infer_table_{en,zh}.npz` per playable IP
 - `web/` (UI + images)
 - **Not** uploaded: `.venv`, LLM training surfaces, `.env`
 

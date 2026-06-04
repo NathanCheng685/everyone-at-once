@@ -12,12 +12,8 @@ from pathlib import Path
 
 import numpy as np
 
-from prompts import CHARACTERS, QUESTIONS
+from ip_loader import artifacts_dir, load_characters, load_questions
 from simulator import simulate, SimulatorError
-
-ROOT = Path(__file__).resolve().parent
-ARTIFACTS = ROOT / "artifacts"
-ARTIFACTS.mkdir(exist_ok=True)
 
 N_CHARS = 6
 N_QS = 12
@@ -37,20 +33,20 @@ def js_divergence(p, q):
     return 0.5 * kl(p, m) + 0.5 * kl(q, m)
 
 
-def build_tensor():
+def build_tensor(ip_id, characters, questions):
     tensor = np.zeros((N_CHARS, N_QS, len(LANGS), 3), dtype=float)
     t0 = time.time()
-    for ci, ch in enumerate(CHARACTERS):
+    for ci, ch in enumerate(characters):
         theta = [0.0] * N_CHARS
         theta[ci] = 1.0
-        for qi, q in enumerate(QUESTIONS):
+        for qi, q in enumerate(questions):
             for li, lang in enumerate(LANGS):
                 print(
                     f"  [{ci+1}/{N_CHARS}] {ch['name_zh']:<10} q{q['id']:>2} {lang} ...",
                     end="", flush=True,
                 )
                 t1 = time.time()
-                probs = simulate(theta, q["id"], lang)
+                probs = simulate(theta, q["id"], lang, ip_id)
                 tensor[ci, qi, li, :] = probs
                 print(f"  {[round(float(x), 3) for x in probs]}  ({time.time()-t1:.1f}s)")
     print(f"\nbuilt tensor in {time.time()-t0:.1f}s, shape={tensor.shape}")
@@ -110,14 +106,22 @@ def top5_jsd_diag(invar_result):
 
 
 def main():
-    print("=== sanity_tensor (6 chars × 12 questions × 2 langs) ===\n")
+    import argparse
+    ap = argparse.ArgumentParser()
+    ap.add_argument("--ip", default="friends")
+    args = ap.parse_args()
+    characters = load_characters(args.ip)
+    questions = load_questions(args.ip)
+    adir = artifacts_dir(args.ip)
+
+    print(f"=== sanity_tensor ip={args.ip} (6×12×2) ===\n")
     try:
-        tensor = build_tensor()
+        tensor = build_tensor(args.ip, characters, questions)
     except SimulatorError as e:
         print(f"\nFAIL — simulator error during build: {e}")
         return 2
 
-    np.save(ARTIFACTS / "sanity_tensor.npy", tensor)
+    np.save(adir / "sanity_tensor.npy", tensor)
 
     c1 = check_distribution_validity(tensor)
     c2 = check_persona_distinguishability(tensor)
@@ -144,9 +148,9 @@ def main():
 
     print("\n=== std diagnostic — top-5 (char, q) by cross-lingual JS divergence ===")
     for jsd_val, c, q in top5_jsd_diag(c3):
-        ch_name = CHARACTERS[c]["name_zh"]
-        sc = QUESTIONS[q]["scenario_zh"][:30]
-        print(f"  JSD={jsd_val:.4f}  {ch_name:<10} q{QUESTIONS[q]['id']:>2}  {sc}...")
+        ch_name = characters[c]["name_zh"]
+        sc = questions[q]["scenario_zh"][:30]
+        print(f"  JSD={jsd_val:.4f}  {ch_name:<10} q{questions[q]['id']:>2}  {sc}...")
 
     out = {
         "shape": list(tensor.shape),
@@ -160,13 +164,13 @@ def main():
         "top5_cross_lingual_jsd": [
             {
                 "jsd": jsd,
-                "character": CHARACTERS[c]["name_zh"],
-                "question_id": QUESTIONS[q]["id"],
+                "character": characters[c]["name_zh"],
+                "question_id": questions[q]["id"],
             }
             for jsd, c, q in top5_jsd_diag(c3)
         ],
     }
-    with open(ARTIFACTS / "sanity_tensor_report.json", "w", encoding="utf-8") as f:
+    with open(adir / "sanity_tensor_report.json", "w", encoding="utf-8") as f:
         json.dump(out, f, ensure_ascii=False, indent=2)
 
     all_pass = c1["passed"] and c2["passed"] and c3["passed"]

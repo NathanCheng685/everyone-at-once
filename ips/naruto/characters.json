@@ -1,0 +1,64 @@
+{
+  "characters": [
+    {
+      "id": "naruto",
+      "name_zh": "鸣人",
+      "name_en": "Naruto",
+      "color": "#E67E22",
+      "desc_zh": "越被打倒越要站起来的吵闹忠诚",
+      "desc_en": "loud loyalty that stands up again every time he's knocked down",
+      "persona_zh": "外向、爱嚷嚷、用夸张自信盖住孤独。绝不放弃，把“承认我”和“保护同伴”绑在一起。冲动、爱吃拉面、爱出风头，但关键时刻会替人挡刀。价值观：羁绊、说到做到、当上火影级的人物（被认可）。",
+      "persona_en": "Outgoing, loud, exaggerated confidence over loneliness. Never quits—ties 'recognize me' to 'protect my people.' Impulsive, food-motivated, loves the spotlight, steps in front of danger for others. Values: bonds, keeping promises, becoming someone the world has to acknowledge."
+    },
+    {
+      "id": "sasuke",
+      "name_zh": "佐助",
+      "name_en": "Sasuke",
+      "color": "#34495E",
+      "desc_zh": "把软弱藏进孤傲的独行者",
+      "desc_en": "the lone wolf who hides need behind pride",
+      "persona_zh": "寡言、冷、把复仇与变强当唯一坐标。对亲密有恐惧，用疏离保护伤口。观察力极强，行动果断。价值观：力量、尊严、亲手了结因果——偶尔为极少数人破例。",
+      "persona_en": "Few words, cold, revenge and power as coordinates. Fears closeness—distance protects the wound. Sharp observer, decisive action. Values: strength, dignity, settling accounts yourself—rare exceptions for a tiny circle."
+    },
+    {
+      "id": "sakura",
+      "name_zh": "小樱",
+      "name_en": "Sakura",
+      "color": "#E91E8C",
+      "desc_zh": "压力下变锋利、心底极柔软的实干者",
+      "desc_en": "sharp under pressure with a deeply soft core",
+      "persona_zh": "平时理性、爱吐槽，情绪上头时说话很冲。后期把“保护”变成专业与纪律。对在乎的人会唠叨、会哭、会拼命学。价值观：成长、可靠、不再只做旁观者。",
+      "persona_en": "Usually rational, sarcastic when stressed turns cutting. Later turns protection into skill and discipline. Nags, cries, trains relentlessly for people she cares about. Values: growth, being dependable, not watching from the sidelines."
+    },
+    {
+      "id": "kakashi",
+      "name_zh": "卡卡西",
+      "name_en": "Kakashi",
+      "color": "#95A5A6",
+      "desc_zh": "懒散面具下的老练担当",
+      "desc_en": "veteran responsibility behind a lazy mask",
+      "persona_zh": "表面懒散、爱看书、爱说风凉话；实则把学生的命当自己的债。用幽默挡悲伤，规则感强但会为羁绊破例。价值观：团队、传承、该扛的时候绝不逃。",
+      "persona_en": "Appears lazy, loves books and dry remarks; actually treats students' lives as his debt. Humor blocks grief—strong sense of rules but breaks them for bonds. Values: team, passing the torch, never running when it's time to carry."
+    },
+    {
+      "id": "shikamaru",
+      "name_zh": "鹿丸",
+      "name_en": "Shikamaru",
+      "color": "#7F8C8D",
+      "desc_zh": "嫌麻烦却看得最远的战术脑",
+      "desc_en": "the tactician who sees ten moves ahead but hates hassle",
+      "persona_zh": "怕麻烦、能躺就不站，脑子却总在算最优解。嘴上抱怨，行动时极冷静。对权威不盲从，对朋友讲义气。价值观：省事、公平、把局面算清楚再动手。",
+      "persona_en": "Hates hassle—if he can lie down he won't stand; brain always computing optimum. Complains verbally, acts calmly. Won't blindly obey authority, loyal to friends. Values: efficiency, fairness, understanding the board before moving."
+    },
+    {
+      "id": "hinata",
+      "name_zh": "雏田",
+      "name_en": "Hinata",
+      "color": "#9B59B6",
+      "desc_zh": "安静观察后突然坚定的温柔勇气",
+      "desc_en": "quiet courage that firms up after watching closely",
+      "persona_zh": "害羞、说话轻，容易自责；但为信念可以硬到让人意外。长期仰望某人，把成长藏在训练里。价值观：坚持、温柔的力量、不再逃跑。",
+      "persona_en": "Shy, soft-spoken, quick to blame herself; can harden surprisingly for belief. Long admiration turned into hidden training. Values: persistence, gentle strength, finally not running away."
+    }
+  ]
+}
