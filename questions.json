@@ -1,0 +1,184 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "scenario_zh": "周五傍晚刚下班，最想做的是？",
+      "scenario_en": "It's Friday at 6pm, you just finished work — what do you most want to do?",
+      "options_zh": [
+        "在家附近找一个安静的角落，把这周一直没读完的那本书读到打烊",
+        "精心打扮一下，约几个好朋友去新开的店，让今晚整个人都精神起来",
+        "回家把书架按自己的逻辑重新排一遍，再慢慢炖一锅自己最拿手的菜"
+      ],
+      "options_en": [
+        "Find a quiet corner somewhere nearby and finish the book you've been carrying around all week",
+        "Get properly dressed up and meet a few close friends at a new place — let the night reset your whole mood",
+        "Go home, reorganize the bookshelf by your own logic, then slowly cook something you're proud of"
+      ]
+    },
+    {
+      "id": 2,
+      "scenario_zh": "最好的朋友凌晨两点哭着打电话来，说刚被分手。你的第一反应是？",
+      "scenario_en": "Your closest friend calls you at 2am, crying — they just got dumped. What's your first move?",
+      "options_zh": [
+        "先用一个段子把对方逗到喘口气，再默默把对方今晚需要的所有事都安排好",
+        "立刻提一袋热乎吃的和几罐酒冲过去，先把肚子填满了再谈感情这件事",
+        "在电话那头哼一段刚刚冒出来的旋律，然后告诉对方\"这段关系在更深的层面其实早就走完了\""
+      ],
+      "options_en": [
+        "Crack a joke first to get them breathing again, then quietly handle every practical thing they'll need tonight",
+        "Grab hot food and a few drinks, head over right now — fill their stomach first, talk about feelings second",
+        "Hum a melody that just appeared in your head, then tell them 'this relationship had already ended on a deeper level long before tonight'"
+      ]
+    },
+    {
+      "id": 3,
+      "scenario_zh": "会议上你的方案被领导当众说\"逻辑不通\"，你的反应是？",
+      "scenario_en": "In a meeting, your boss publicly says your proposal 'doesn't make logical sense.' Your reaction?",
+      "options_zh": [
+        "当场就开始一条一条解释自己的逻辑，哪怕气氛已经不对了也要把话说完",
+        "嘴上没反驳，心里委屈了一下，安慰自己——周末去给自己换个新形象就好了",
+        "内心毫无波澜：\"他可能今天刚被什么人骂过，能量场就是这样传递的\""
+      ],
+      "options_en": [
+        "Start defending your reasoning point by point right there — even when the room turns, you finish your case",
+        "Don't push back out loud, but sting privately — comfort yourself by planning a full image refresh for the weekend",
+        "Feel zero ripple inside: 'they probably got chewed out by someone earlier — that's just how energy moves through people'"
+      ]
+    },
+    {
+      "id": 4,
+      "scenario_zh": "你突然收到一笔 5 万块的意外奖金，第一反应是？",
+      "scenario_en": "An unexpected bonus drops into your account. What's your gut move?",
+      "options_zh": [
+        "一半存起来，防止自己变成最不想成为的那种大人；另一半全部花在最没用但买着开心的小玩意上",
+        "先请所有朋友吃一顿大的，剩下的边过日子边花完",
+        "立刻列一张清单——一半用来还/存，另一半按优先级排好该买什么"
+      ],
+      "options_en": [
+        "Half into savings — insurance against becoming the kind of adult you've always feared; the other half on the most useless little things that make you happy",
+        "Take every friend out for a big meal first, then spend the rest as life unfolds",
+        "Immediately make a list — half for paying down or saving, the other half allocated by priority across what you actually want"
+      ]
+    },
+    {
+      "id": 5,
+      "scenario_zh": "第一次约会，你倾向于怎么安排？",
+      "scenario_en": "First date — how do you want to set it up?",
+      "options_zh": [
+        "选一个能安静坐下聊到本质的地方，\"对方能不能被认真聊\"是这次能不能继续的关键",
+        "街角随便找个馆子，喝点东西聊聊，看到底合不合得来",
+        "约去一个完全没去过、有点奇怪的地方，反正\"看看会发生什么\"才有意思"
+      ],
+      "options_en": [
+        "Somewhere quiet where you can actually sit and talk to the core of things — 'can they be taken seriously' is the whole game",
+        "Some unremarkable bar around the corner, drinks, light conversation — see if there's any spark",
+        "Drag them to a place neither of you has ever been, slightly weird is fine — the whole point is to see what happens"
+      ]
+    },
+    {
+      "id": 6,
+      "scenario_zh": "室友把你冰箱里准备明天招待客人的食材提前吃掉了。你的反应是？",
+      "scenario_en": "Your roommate ate the food you were saving in the fridge for tomorrow's guests. Your reaction?",
+      "options_zh": [
+        "嘴上说\"没事\"，心里默默把对方下次借东西的请求拉进黑名单",
+        "翻个白眼：\"噢太棒了，原来这就是我跟你合租换来的额外服务\"",
+        "直接列一张清单贴在冰箱上：\"以下属于明天客人用的，你不动我们就还是朋友\""
+      ],
+      "options_en": [
+        "Say 'no big deal' out loud — privately move them onto a 'never lending them anything again' list in your head",
+        "Roll your eyes: 'oh, fantastic — so this is the bonus service I get for splitting rent with you'",
+        "Print out a sticky note for the fridge: 'these belong to tomorrow's guests — touch them and we're no longer friends'"
+      ]
+    },
+    {
+      "id": 7,
+      "scenario_zh": "派对上你被介绍给一个看起来很有趣的陌生人，你的开场是？",
+      "scenario_en": "At a party, you get introduced to someone who looks interesting. Your opener?",
+      "options_zh": [
+        "找一个\"实际上\"开头的句子，把话题拉到自己最有底气讲的领域，看对方接不接得住",
+        "已经认识全场至少一半的人了，看对方一个人立刻拉过去给对方介绍这个那个",
+        "歪头一笑，半认真地问：\"你相不相信我们其实在前世已经认识过了？\""
+      ],
+      "options_en": [
+        "Find an 'actually'-shaped opener and pull the conversation toward the territory you're most ready to defend — see if they can hang",
+        "You already know half the room — you immediately drag them around to introduce them to everyone",
+        "Tilt your head and ask, half serious: 'do you believe we've actually met before, in a past life?'"
+      ]
+    },
+    {
+      "id": 8,
+      "scenario_zh": "最好的朋友突然出大事（被骗光积蓄、突然丢工作、卷进丑闻），半夜来找你帮忙。你的第一反应是？",
+      "scenario_en": "Your best friend hits a sudden crisis — scammed out of their savings, just lost a job, caught in a scandal — and shows up at your door at midnight. First move?",
+      "options_zh": [
+        "先抱着对方哭一场，然后说\"明天我们一起把整个人状态重新做一遍——你得先重新觉得自己还是自己\"",
+        "先用一个段子把对方逗笑、让对方缓口气，然后默默打开转账界面把数字填上",
+        "让对方搬过来住，所有事情你先扛着——别管你怎么扛的"
+      ],
+      "options_en": [
+        "Hug them and cry with them first, then say 'tomorrow we redo your whole presence from the inside out — you need to feel like yourself again first'",
+        "Crack a joke to get them breathing again, then quietly open your transfer screen and start typing in the number",
+        "Tell them to move in — you'll carry all of it for now, don't worry about how"
+      ]
+    },
+    {
+      "id": 9,
+      "scenario_zh": "你最讨厌的人意外升职了、或者拿到了一件好事。你心里的第一反应是？",
+      "scenario_en": "Someone you can't stand just got promoted, or caught some big break. Your first internal reaction?",
+      "options_zh": [
+        "当晚就把过去几年所有的相关记录都翻出来，准备明天去找领导认真谈一下\"标准到底是什么\"",
+        "\"我看不出有什么好生气的，他过他的，今晚的球赛照常看\"",
+        "笑一下：\"宇宙自有安排——可能他有我没看到的优点，或者他上辈子帮过我\""
+      ],
+      "options_en": [
+        "That same night, dig out every relevant record from the past few years — you'll be at your boss's office tomorrow asking 'what are the standards, exactly?'",
+        "'I don't see what there is to be mad about — they live their life, the game tonight starts at the usual time'",
+        "Smile: 'the universe knows what it's doing — maybe they have something I never saw, or maybe they helped me out in a past life'"
+      ]
+    },
+    {
+      "id": 10,
+      "scenario_zh": "想象十年后的自己，你最希望的画面是？",
+      "scenario_en": "Picture yourself ten years from now — what's the version you most hope for?",
+      "options_zh": [
+        "一个更接近\"自己想成为的样子\"的版本，过去那些让我难堪的特质已经不再控制我",
+        "有一段不需要靠玩笑撑着的关系，自己也终于不像一直担心会变成的那种大人",
+        "所有事都被我整理得明明白白——家、朋友、工作，全在我能掌控的节奏里"
+      ],
+      "options_en": [
+        "A version closer to the person you actually want to be — the traits that used to embarrass you no longer run the show",
+        "A relationship that doesn't have to be held up by jokes, and you finally don't resemble the kind of adult you've always been afraid of becoming",
+        "Everything in order — home, friends, work — all moving at the pace you're choosing"
+      ]
+    },
+    {
+      "id": 11,
+      "scenario_zh": "凌晨三点你毫无征兆地醒了，再也睡不着。你最可能做什么？",
+      "scenario_en": "It's 3am and you're suddenly wide awake with no chance of falling back asleep. Most likely move?",
+      "options_zh": [
+        "干脆起来打开电脑，把这周一直没写完的东西重新整理一遍",
+        "起来把客厅重新拖一遍，顺便把明天要做的事按时间块排好",
+        "去厨房翻点冰箱里能直接吃的，找一个老电影放着，等困意自己回来"
+      ],
+      "options_en": [
+        "Just get up, open your laptop, and redo the writing from this week that you never finished",
+        "Get up and mop the living room, then time-block tomorrow's tasks hour by hour",
+        "Wander to the kitchen, grab whatever you can eat straight out of the fridge, throw on an old movie, and let sleep find you again"
+      ]
+    },
+    {
+      "id": 12,
+      "scenario_zh": "朋友刚做了件不太光彩的小事（对伴侣 / 家人 / 上司隐瞒），求你在被问到时帮对方圆一下。你的反应是？",
+      "scenario_en": "A friend just did something slightly off — hid it from their partner / family / boss — and asks you to cover for them if asked. Your reaction?",
+      "options_zh": [
+        "睁大眼睛：\"不行不行——我这种人撒谎一定穿帮，但我陪你想一个能漂亮过关的办法！\"",
+        "半开玩笑推掉：\"撒谎需要的承诺感我恐怕承受不起——你换一个，但你的秘密我会守一辈子\"",
+        "摇头：\"撒谎会改变能量场，对你和我都不好——但我可以陪你想一个不撒谎也能过去的版本\""
+      ],
+      "options_en": [
+        "Eyes wide: 'no no no — me lying always falls apart, but I'll sit with you and we'll figure out something elegant that actually works!'",
+        "Brush it off with a joke: 'lying takes more commitment than I can handle right now — pick someone else, but your secret I'll guard for life'",
+        "Shake your head: 'lying changes the energy for both of us — but I can sit here while we think of a way through this that doesn't require lying'"
+      ]
+    }
+  ]
+}

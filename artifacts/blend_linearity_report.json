@@ -1,0 +1,14 @@
+{
+  "n": 12,
+  "lang": "zh",
+  "seed": 0,
+  "n_failures": 0,
+  "median_jsd_linear": 0.027742871377373295,
+  "mean_jsd_linear": 0.03511514469811539,
+  "p90_jsd_linear": 0.07413170040806631,
+  "max_jsd_linear": 0.12991643440045825,
+  "argmax_agreement": 0.3819444444444444,
+  "median_jsd_uniform_baseline": 0.018587966003940394,
+  "pct_under_0.05": 0.7569444444444444,
+  "linear_holds": false
+}

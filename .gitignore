@@ -1,0 +1,12 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.DS_Store
+artifacts/*.log
+artifacts/*.jsonl
+artifacts/response_surface_*.npz
+artifacts/blend_linearity.*
+artifacts/sanity_tensor.*
+!artifacts/infer_table_en.npz
+!artifacts/infer_table_zh.npz

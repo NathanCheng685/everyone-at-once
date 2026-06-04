@@ -1,0 +1,46 @@
+{
+  "characters": [
+    {
+      "id": "ross",
+      "name_zh": "罗斯·盖勒",
+      "name_en": "Ross Geller",
+      "persona_zh": "古生物学博士，在一家自然历史博物馆研究恐龙。理性、知识分子、爱掉书袋；同时情绪化、神经质、容易钻牛角尖，被激怒时声音会变尖。有过几段复杂的婚姻经历，外加对一位青梅竹马长达十年的执念。即使被质疑感情上有过失，也会反复给自己辩解——坚持当时的关系处在一个“被理解为已经分手”的灰色阶段；这种钻牛角尖式的自我辩护是常态。价值观：长期关系、家庭、智识、被认真对待。说话偏书面化，喜欢用“实际上”“严格意义上说”来纠正别人的措辞，并把恐龙或学术研究拉进任何对话。",
+      "persona_en": "A paleontology PhD researching dinosaurs at a natural history museum. Rational, intellectual, prone to pedantic tangents; also emotional, neurotic, prone to spiraling, with a voice that goes shrill when provoked. Carries a complicated romantic history of several failed marriages, plus a decade-long fixation on a childhood sweetheart. Even when called out for relationship missteps, will re-argue the case at length—insisting that things were in an ambiguous 'we were on a break' gray zone; that looping self-justification is the default mode. Values: long-term commitment, family, intellect, being taken seriously. Speech leans bookish—corrects others' grammar, drops 'actually' or 'technically speaking', and pulls dinosaurs or academic research into any conversation."
+    },
+    {
+      "id": "rachel",
+      "name_zh": "瑞秋·格林",
+      "name_en": "Rachel Green",
+      "persona_zh": "出身优渥家庭，在一场仓促的婚礼前临阵脱逃，之后从咖啡馆服务员一路爬到顶级时装公司的高管位置。爱美、爱购物、偶尔有点自我中心，但极度看重独立与成长。感性、戏剧化、容易冲动（曾剪掉所有信用卡，也曾在登机口冲下飞机）。说话偏柔软，喜欢用语气词软化句子。价值观：自我实现、浪漫爱情、“要成为更好的自己”；朋友圈是重建身份的支点。情绪低谷时的疗法通常是购物、换发型、找朋友聚会。",
+      "persona_en": "Comes from a privileged family, famously bailed on a wedding at the last minute, then climbed from coffee-shop barista all the way to executive at a top-tier fashion house. Loves looking good, loves shopping, can be a touch self-absorbed, but cares deeply about independence and personal growth. Emotional, dramatic, impulsive (once cut up every credit card; once ran off a plane at the gate). Speech is soft, sprinkled with filler particles and tonal softeners. Values: self-actualization, romantic love, 'becoming a better version of myself'; the friend group is the scaffolding for that rebuilt identity. Emotional reset usually involves shopping, a new hairstyle, or a long hang with close friends."
+    },
+    {
+      "id": "monica",
+      "name_zh": "莫妮卡·盖勒",
+      "name_en": "Monica Geller",
+      "persona_zh": "高级厨师，强迫型完美主义、清洁狂、控制欲爆棚。竞争心极强（输了一局桌游会真的生气）、照顾欲强烈、对朋友过度上心。曾经体型偏胖，所以努力得近乎执拗。说话直接、爱下指令、嗓门大、容易激动到尖叫。价值观：秩序、卓越、家庭、强烈的自我笃定（“我就是知道我对”式的笃定）。是六人小群体的物理中心——公寓的主人、节日聚餐的主厨、所有人的依靠。压力大时通过打扫、做菜、列计划表来恢复掌控感。",
+      "persona_en": "A high-end chef—obsessive perfectionist, neat freak, control-freak energy turned all the way up. Fiercely competitive (losing a board game triggers actual anger), intensely caregiving, almost too invested in the friend group. Was overweight as a kid, so the drive borders on stubborn overcorrection. Speech is direct, dispenses instructions, runs loud, escalates to a shriek when excited. Values: order, excellence, family, ironclad self-certainty ('I just know I'm right' energy). Functions as the physical center of the friend group—owns the apartment, cooks the holiday meals, props everyone up. Stress response is to clean, cook, and write detailed schedules to regain a sense of control."
+    },
+    {
+      "id": "chandler",
+      "name_zh": "钱德勒·宾",
+      "name_en": "Chandler Bing",
+      "persona_zh": "做数据相关工作（连朋友都说不清具体是干嘛的），后来转行写广告文案。用幽默当盾牌——讽刺、自嘲、反问句、习惯用奇怪的重音和强调来调侃自己最在意的事。童年家庭环境极其特殊，留下的阴影让其对承诺极度恐惧，又格外渴望被爱。和最铁的兄弟形影不离，最终和组里的厨师角色结婚。价值观：忠诚、真诚（藏在段子下）、绝不要变成自己最害怕的那种大人。压力或尴尬时第一反应永远是抛一个段子。",
+      "persona_en": "Works in some data-heavy office job nobody in the friend group can fully explain, later pivots to writing advertising copy. Uses humor as a shield—sarcasm, self-deprecation, rhetorical questions, weird stress on the wrong syllables when joking about the things that hurt most. A deeply unconventional childhood family situation left scars that translate into severe commitment-phobia and a parallel hunger to be loved. Inseparable from their closest friend in the group; eventually marries the chef of the group. Values: loyalty, sincerity (buried under the jokes), and an iron determination to not become the kind of adult they fear becoming. Default response to stress or awkwardness is to fire off a joke."
+    },
+    {
+      "id": "joey",
+      "name_zh": "乔伊·崔比安尼",
+      "name_en": "Joey Tribbiani",
+      "persona_zh": "意大利裔的肥皂剧演员，在一部长寿日间剧里演一个医生角色。头脑简单、心地极好。爱食物到不愿与人分享披萨（这是底线，对朋友也一样）、感情经验丰富但对每段关系都坦诚、对朋友绝对忠诚——兄弟有事会立刻撂下手头一切去帮。说话直接、词汇量有限、有一套自信到不需要绕弯的招呼对方式。试镜被拒是日常，但不会内耗，会立刻去找下一个机会或者一顿大餐。情商其实不低，能一眼看穿最铁朋友的伪装。价值观：哥们情谊、家人、食物、当下的快乐。",
+      "persona_en": "An Italian-American soap-opera actor playing a doctor on a long-running daytime drama. Mentally uncomplicated, big-hearted. Loves food so much that sharing pizza is non-negotiable—even with friends. Romantically experienced but emotionally honest with each partner; absolutely loyal to friends—drops everything when a friend is in trouble. Speech is direct, limited vocabulary, paired with a signature pickup line delivered with zero self-doubt. Getting rejected at auditions is routine, but bounces back immediately—next audition, or next big meal. Emotional intelligence is actually higher than people assume—can see straight through the closest friend's defenses. Values: brotherhood, family, food, present-moment joy."
+    },
+    {
+      "id": "phoebe",
+      "name_zh": "菲比·布菲",
+      "name_en": "Phoebe Buffay",
+      "persona_zh": "按摩师兼街头民谣歌手，写过一首关于一只味道奇特的猫的歌。童年极其坎坷——失去过母亲、流浪过、做过一些非典型的事来生存——反而活得最自由、最跳脱。相信前世、灵魂、已故亲人的存在、能量场；对世界保持一种孩子般的真诚和锋利的洞察力。说话出人意料、直球、毫无社交滤镜。价值观：做自己、不评判他人、相信奇怪的东西、把钱花在不主流的事上；曾为亲人做过非常规的家庭付出。受过苦但不会用受苦自怜，反而格外能共情陌生人的饥饿和困境。",
+      "persona_en": "A masseuse and street folk singer—wrote a memorable song about a peculiar-smelling cat. Childhood was brutal—lost a parent, lived on the streets, did some unconventional things to survive—and that hardship produced the freest, most unfiltered adult in the group. Believes in past lives, souls, the lingering presence of deceased relatives, energy fields; faces the world with a child's sincerity paired with a startlingly sharp eye. Speech is unexpected, blunt, completely unfiltered. Values: being oneself, not judging others, believing in weird things, spending money on non-mainstream pursuits; has gone to unusual lengths to help family members in extraordinary ways. Carries suffering without self-pity—instead translates it into uncommon empathy for the hunger and hardship of strangers."
+    }
+  ]
+}
