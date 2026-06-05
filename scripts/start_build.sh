@@ -1,11 +1,13 @@
 #!/usr/bin/env bash
 # Detached long-run builder (survives closing the launching terminal).
 # Usage: ./scripts/start_build.sh harry-potter zh
+# Env: WORKERS=2 (default 4) — use 1–2 when running multiple IPs in parallel (ROG OLLAMA_NUM_PARALLEL=4)
 set -euo pipefail
 ROOT="$(cd "$(dirname "$0")/.." && pwd)"
 cd "$ROOT"
 IP="${1:?ip_id}"
 LANG="${2:?lang}"
+WORKERS="${WORKERS:-4}"
 LOG="artifacts/${IP}_${LANG}_build.log"
 mkdir -p "artifacts/${IP}"
 
@@ -16,7 +18,7 @@ if pgrep -f "build_response_surface.py --ip ${IP} --lang ${LANG}" >/dev/null 2>&
 fi
 
 nohup caffeinate -dimsu env PYTHONUNBUFFERED=1 \
-  python3 build_response_surface.py --ip "$IP" --lang "$LANG" --n 400 --workers 4 \
+  python3 build_response_surface.py --ip "$IP" --lang "$LANG" --n 400 --workers "$WORKERS" \
   >>"$LOG" 2>&1 </dev/null &
 disown -h $! 2>/dev/null || true
 echo "started PID $!  log=$LOG"

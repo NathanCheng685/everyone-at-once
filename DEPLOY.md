@@ -35,9 +35,13 @@ git push -u origin main
 ## 3. First deploy notes
 
 - **Build** ~2–3 min (install numpy + gunicorn)
-- **Start** loads two ~24 MB tables into RAM (~30–60 s cold start on free tier)
+- **Start** loads all playable `infer_table_{en,zh}.npz` into RAM — currently 8
+  tables (friends, harry-potter, avengers, naruto × en/zh), ~24 MB each
+  (~60–120 s cold start on free tier)
 - **Health check** hits `/api/langs` — needs at least `en` or `zh` engine loaded
-- **RAM**: use **≥ 512 MB** (trial 1 GB is fine). If OOM, bump service memory in Railway settings
+- **RAM**: 8 tables expand to **~400 MB+** live (float64 log-probs), so use
+  **≥ 1 GB**. The 512 MB tier will OOM. If you add more IPs, budget ~50 MB RAM per
+  (IP × lang). Bump service memory in Railway settings if it restarts on boot.
 
 ## 4. Optional: custom domain
 

@@ -16,14 +16,25 @@ IP_REQUESTS = ARTIFACTS / "ip_requests.jsonl"
 app = Flask(__name__, static_folder=str(WEB), static_url_path="")
 
 IPS = [
-    {"id": "friends", "title": "Friends", "tagline": "Which of the six live in you?",
+    {"id": "friends", "title": "Friends", "title_zh": "老友记",
+     "tagline": "Which of the six live in you?", "tagline_zh": "六个人里,你住着哪几个?",
      "image": "/img/ip-friends.jpg", "accent": "#C8553D"},
-    {"id": "harry-potter", "title": "Harry Potter", "tagline": "Beyond the four houses.",
+    {"id": "harry-potter", "title": "Harry Potter", "title_zh": "哈利·波特",
+     "tagline": "Beyond the four houses.", "tagline_zh": "四个学院之外的你。",
      "image": "/img/ip-hp.jpg", "accent": "#7A5C2E"},
-    {"id": "avengers", "title": "Avengers", "tagline": "Your hero composition.",
+    {"id": "avengers", "title": "Avengers", "title_zh": "复仇者联盟",
+     "tagline": "Your hero composition.", "tagline_zh": "你的英雄构成。",
      "image": "/img/ip-avengers.jpg", "accent": "#8E4B5C"},
-    {"id": "naruto", "title": "Naruto", "tagline": "Your ninja-team blend.",
-     "image": "/img/ip-naruto.jpg", "accent": "#E67E22"},
+    {"id": "naruto", "title": "Naruto", "title_zh": "火影忍者",
+     "tagline": "Your ninja-team blend.", "tagline_zh": "你的忍者小队配比。",
+     "image": "/img/ip-naruto.svg", "accent": "#E67E22"},
+    # Coming soon — no artifacts yet, so _ip_available() reports them as coming_soon.
+    {"id": "greek-mythology", "title": "Greek Mythology", "title_zh": "希腊神话",
+     "tagline": "Olympians in your blood.", "tagline_zh": "你血脉里的奥林匹斯众神。",
+     "image": "/img/ip-greek.jpg", "accent": "#3E6B8E"},
+    {"id": "chinese-mythology", "title": "Chinese Mythology", "title_zh": "中国神话",
+     "tagline": "Gods and beasts of mountains and seas.", "tagline_zh": "山海之间的神与兽。",
+     "image": "/img/ip-chinese-mythology.svg", "accent": "#9E2B2B"},
 ]
 
 ENGINES = {}

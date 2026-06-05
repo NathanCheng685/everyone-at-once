@@ -132,7 +132,7 @@ const charColor = (id)=> CHAR_META[id]?.color || FRIENDS_COLOR[id] || 'var(--acc
 const charImg = (id)=> {
   if(!curIP) return '/img/'+id+'.png';
   if(curIP.id==='friends') return '/img/'+id+'.png';
-  return '/img/'+curIP.id+'/'+id+'.png';
+  return '/img/'+curIP.id+'/'+id+'.svg';
 };
 const charDesc = (id)=> CHAR_META[id]?.desc || '';
 const T = {
@@ -213,9 +213,11 @@ function home(){
   const grid=v.querySelector('#grid');
   IPS.forEach(ip=>{
     const playable = ip.status==='available';
+    const title = (LANG==='zh' && ip.title_zh) ? ip.title_zh : ip.title;
+    const tag = (LANG==='zh' && ip.tagline_zh) ? ip.tagline_zh : ip.tagline;
     const c=$(`<div class="ipcard ${playable?'play':'soon'}" ${playable?'':`data-soon="${t.soon}"`}>
-      <div class="thumb"><img alt="${ip.title}" src="${ip.image}"></div>
-      <div class="body"><div class="t">${ip.title}</div><div class="tag">${ip.tagline}</div></div>
+      <div class="thumb"><img alt="${title}" src="${ip.image}"></div>
+      <div class="body"><div class="t">${title}</div><div class="tag">${tag}</div></div>
       ${playable?`<span class="badge">${t.play}</span>`:''}
     </div>`);
     fallback(c.querySelector('img'), ip.accent||'#bbb');
