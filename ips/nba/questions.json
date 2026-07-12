@@ -1,0 +1,184 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "scenario_zh": "周五傍晚刚下班，最想做的是？",
+      "scenario_en": "It's Friday at 6pm, you just finished work — what do you most want to do?",
+      "options_zh": [
+        "按自己的保养流程来：理疗、拉伸、早睡，明天还有安排",
+        "回家和家人闹作一团，做饭、游戏、大笑，简单快乐",
+        "一个人待着，把最近着迷的那件事继续钻研到深夜"
+      ],
+      "options_en": [
+        "Run your maintenance routine: treatment, stretching, early bed — tomorrow is planned",
+        "Go home and get loud with family — cooking, games, laughter, simple joy",
+        "Be alone and keep drilling into the thing you're currently obsessed with, deep into the night"
+      ]
+    },
+    {
+      "id": 2,
+      "scenario_zh": "最好的朋友凌晨两点哭着打电话来，说刚被分手。你的第一反应是？",
+      "scenario_en": "Your closest friend calls you at 2am, crying — they just got dumped. What's your first move?",
+      "options_zh": [
+        "开着视频一直陪他，插科打诨，先把他逗笑再说",
+        "听完直接说实话：问题出在哪、他自己哪里也有责任、接下来该怎么办",
+        "安静听完不评价，第二天默默把能帮上的事都安排好"
+      ],
+      "options_en": [
+        "Stay on video with them, clowning around until you get that first laugh out",
+        "Hear them out then give it straight: what went wrong, their part in it, and what to do next",
+        "Listen quietly without judging, then by morning have quietly arranged everything that could help"
+      ]
+    },
+    {
+      "id": 3,
+      "scenario_zh": "会议上你的方案被领导当众说\"逻辑不通\"，你的反应是？",
+      "scenario_en": "In a meeting, your boss publicly says your proposal 'doesn't make logical sense.' Your reaction?",
+      "options_zh": [
+        "会上滴水不漏地说\"收到\"，会后单独找他把误会一层层捋清，顺便把关系处得更近",
+        "当场怼回去：具体哪一条不通？我现在就一条条讲给你听",
+        "自嘲一句把大家逗笑，会后该改就改，心情完全不受影响"
+      ],
+      "options_en": [
+        "Accept it smoothly in the room — manage the optics first, then quietly sort both the fix and the relationship offline",
+        "Push back right there: which point exactly? I'll walk you through them one by one, right now",
+        "Crack a self-deprecating joke and get the room laughing — fix what needs fixing after, mood untouched"
+      ]
+    },
+    {
+      "id": 4,
+      "scenario_zh": "你突然收到一笔 5 万块的意外奖金，第一反应是？",
+      "scenario_en": "An unexpected bonus drops into your account. What's your gut move?",
+      "options_zh": [
+        "投进自己的事业版图，钱要用来生钱、放大影响力",
+        "先给家人花，看着他们开心，剩下的存起来",
+        "没什么特别想买的，随手存起来，日子照旧"
+      ],
+      "options_en": [
+        "Put it into your ventures — money should make money and grow your reach",
+        "Spend on family first, enjoy watching them happy, save the rest",
+        "Nothing you particularly want — tuck it away and carry on as usual"
+      ]
+    },
+    {
+      "id": 5,
+      "scenario_zh": "第一次约会，你倾向于怎么安排？",
+      "scenario_en": "First date — how do you want to set it up?",
+      "options_zh": [
+        "安排得明明白白，每个环节都体面周到，不出任何差错",
+        "走轻松搞笑路线，让对方从头到尾笑个不停",
+        "低调随意，吃顿简单的，能不能聊得来最重要"
+      ],
+      "options_en": [
+        "Fully organized — every step gracious and thought through, nothing left to chance",
+        "Keep it light and funny — they should be laughing from start to finish",
+        "Low-key and casual — a simple meal; whether the conversation flows is what matters"
+      ]
+    },
+    {
+      "id": 6,
+      "scenario_zh": "室友把你冰箱里准备明天招待客人的食材提前吃掉了。你的反应是？",
+      "scenario_en": "Your roommate ate the food you were saving in the fridge for tomorrow's guests. Your reaction?",
+      "options_zh": [
+        "当面直说：这不行，今晚就得补回来，下不为例",
+        "笑着损他两句，一起点个外卖就把这页翻过去",
+        "不动声色地定好新规矩，保证这种事不会再发生第二次"
+      ],
+      "options_en": [
+        "Tell them straight to their face: not okay, replace it tonight, never again",
+        "Roast them a little, order delivery together, and let it go",
+        "Without drama, set a new house rule that makes sure this never happens twice"
+      ]
+    },
+    {
+      "id": 7,
+      "scenario_zh": "派对上你被介绍给一个看起来很有趣的陌生人，你的开场是？",
+      "scenario_en": "At a party, you get introduced to someone who looks interesting. Your opener?",
+      "options_zh": [
+        "大方主导话题，几分钟内让对方进入你的节奏",
+        "慢半拍地接一句冷幽默，把对方逗笑还一脸无辜",
+        "话不多，除非聊到自己真正热爱的领域，才会滔滔不绝"
+      ],
+      "options_en": [
+        "Take the lead graciously — within minutes they're on your wavelength",
+        "Land one deadpan line half a beat late, cracking them up while looking innocent",
+        "Say little — until the topic hits what you truly love, and then you can't stop"
+      ]
+    },
+    {
+      "id": 8,
+      "scenario_zh": "最好的朋友突然出大事，半夜来找你帮忙。你的第一反应是？",
+      "scenario_en": "Your best friend hits a sudden crisis and shows up at your door at midnight. First move?",
+      "options_zh": [
+        "立刻启动人脉和资源：找人、出钱、定方案，今晚全部安排到位",
+        "整晚陪着他，插科打诨也好沉默也好，人在比什么都强",
+        "听完直接说该做什么、他自己哪里要改，天一亮就陪他去办"
+      ],
+      "options_en": [
+        "Mobilize contacts and resources immediately: people, money, plan — all arranged tonight",
+        "Stay with them all night — joking around or sitting in silence, being there beats everything",
+        "Hear it all, tell them straight what to do and what to own, then go handle it with them at dawn"
+      ]
+    },
+    {
+      "id": 9,
+      "scenario_zh": "你最讨厌的人意外升职了。你心里的第一反应是？",
+      "scenario_en": "Someone you can't stand just got promoted. Your first internal reaction?",
+      "options_zh": [
+        "默默记下：下次正面交锋，我会让结果说话",
+        "毫无波澜，各走各的路，我的日子不围着他转",
+        "跟家人朋友说笑两句就翻篇，好心情不留给这种事"
+      ],
+      "options_en": [
+        "Quietly note it down: next head-to-head, the results will do the talking",
+        "Zero ripples — separate roads; my life doesn't orbit around them",
+        "A couple of jokes with family and friends, then turn the page — good moods aren't wasted on this"
+      ]
+    },
+    {
+      "id": 10,
+      "scenario_zh": "想象十年后的自己，你最希望的画面是？",
+      "scenario_en": "Picture yourself ten years from now — what's the version you most hope for?",
+      "options_zh": [
+        "建立起自己的商业版图和影响力，带着更多人一起走上来",
+        "回到家乡过安静日子，守着家人和自己的小天地",
+        "还在做自己最热爱的那件事，而且水平依然是顶尖的"
+      ],
+      "options_en": [
+        "Your own business empire and influence, pulling more people up along with you",
+        "Back home living quietly, close to family and your own little world",
+        "Still doing the one thing you love most — and still elite at it"
+      ]
+    },
+    {
+      "id": 11,
+      "scenario_zh": "凌晨三点你毫无征兆地醒了，再也睡不着。你最可能做什么？",
+      "scenario_en": "It's 3am and you're suddenly wide awake. Most likely move?",
+      "options_zh": [
+        "既然醒了就起来干活——别人还在睡，这正是我领先的机会",
+        "睡眠是恢复的一部分，不容打折——翻个身继续睡",
+        "刷会儿手机看看大家在聊什么，手痒了还要回两条"
+      ],
+      "options_en": [
+        "Get up and work — everyone else is asleep, and that's exactly my head start",
+        "Recovery is non-negotiable — the body needs its sleep; roll over and drift back off",
+        "Scroll for a bit, see what everyone's saying — and probably fire back a reply or two"
+      ]
+    },
+    {
+      "id": 12,
+      "scenario_zh": "部门年会需要有人上台表演节目，大家的目光突然都投向你。你的反应是？",
+      "scenario_en": "The office party needs someone to perform on stage, and suddenly every head turns to you. Your reaction?",
+      "options_zh": [
+        "主动接过话筒——带动全场气氛这种事，我向来最拿手",
+        "能躲就躲，这种场合真不是我的地方，把机会让给想表现的人",
+        "接，但必须按我自己的方式认真准备——要么不上，要上就让人记住"
+      ],
+      "options_en": [
+        "Take the mic — lifting a whole room is exactly what I do best",
+        "Dodge it if at all possible — this really isn't my scene; let someone who wants it shine",
+        "Accept, but prepare it my own way, seriously — either don't go up, or go up and be remembered"
+      ]
+    }
+  ]
+}

@@ -80,6 +80,25 @@ def main():
         print(f"  {nm:<22} -> top2={got:<22} "
               f"({res['post_mean'][i]*100:.0f}/{res['post_mean'][j]*100:.0f}%)  "
               f"{'OK' if ok else 'partial'}")
+
+    print("\n[D] production engine (tempered) on pure patterns:")
+    try:
+        from engine import PosteriorEngine
+        eng = PosteriorEngine(args.ip, args.lang)
+    except FileNotFoundError as e:
+        print(f"  (skipped: {e})")
+        return 0
+    hits_d = 0
+    for c in range(N_CHARS):
+        r = eng.infer(ans[c].tolist())
+        ok = r["top"] == chars[c]["id"]
+        hits_d += ok
+        d0 = r["dominant"][0]
+        own = next(x for x in r["dominant"] if x["id"] == chars[c]["id"])
+        print(f"  {chars[c]['name_zh']:<12} -> top={d0['name_zh']:<12} "
+              f"p_dom(own)={own['p_dom']*100:4.1f}%  mean(own)={own['mean']*100:4.1f}%  "
+              f"ess={r['ess']:.0f}  {'OK' if ok else 'MISS'}")
+    print(f"  --> {hits_d}/{N_CHARS} personas correctly top-ranked (beta={eng.beta})")
     return 0
 
 

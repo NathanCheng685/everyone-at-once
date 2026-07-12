@@ -19,7 +19,7 @@ IMG = ROOT / "web" / "img"
 IPS = ROOT / "ips"
 
 # IPs whose character avatars we generate (friends already has real PNGs).
-AVATAR_IPS = ("harry-potter", "avengers", "naruto")
+AVATAR_IPS = ("harry-potter", "avengers", "naruto", "fifa", "nba")
 
 
 def _h(c):
@@ -104,6 +104,34 @@ def chinese_card():
     return _card("#9E2B2B", "#4A1414", "#E8B04B", sun + mtn + waves)
 
 
+def fifa_card():
+    # Football: center circle + halfway line on grass, classic ball at kickoff.
+    pitch = ('<rect x="-380" y="-285" width="760" height="570" fill="#ffffff" fill-opacity="0"/>'
+             '<line x1="-380" y1="0" x2="380" y2="0" stroke="#ffffff" stroke-opacity="0.35" stroke-width="6"/>'
+             '<circle r="130" fill="none" stroke="#ffffff" stroke-opacity="0.35" stroke-width="6"/>')
+    stripes = ''.join(
+        f'<rect x="{-380+i*95}" y="-285" width="95" height="570" fill="#ffffff" fill-opacity="{0.05 if i%2 else 0:.2f}"/>'
+        for i in range(8))
+    ball = ('<circle r="62" fill="#ffffff" fill-opacity="0.95"/>'
+            '<path d="M0,-26 L24,-8 L15,20 L-15,20 L-24,-8 Z" fill="#1C2B22"/>'
+            ''.join(f'<path transform="rotate({a})" d="M0,-62 L0,-26" stroke="#1C2B22" stroke-width="7"/>'
+                    for a in (0, 72, 144, 216, 288)) +
+            '<circle r="62" fill="none" stroke="#1C2B22" stroke-opacity="0.75" stroke-width="5"/>')
+    return _card("#2F9E55", "#125A31", "#B8F0C8", stripes + pitch + ball)
+
+
+def nba_card():
+    # Basketball: big ball with seams, floor-line arcs behind.
+    arcs = ('<circle r="150" fill="none" stroke="#ffffff" stroke-opacity="0.16" stroke-width="10"/>'
+            '<circle r="200" fill="none" stroke="#ffffff" stroke-opacity="0.09" stroke-width="10"/>')
+    ball = ('<circle r="104" fill="#E8833A"/>'
+            '<circle r="104" fill="none" stroke="#3D1E0C" stroke-opacity="0.85" stroke-width="7"/>'
+            '<path d="M-104,0 H104 M0,-104 V104" stroke="#3D1E0C" stroke-opacity="0.85" stroke-width="7" fill="none"/>'
+            '<path d="M-74,-74 Q0,-20 74,-74 M-74,74 Q0,20 74,74" stroke="#3D1E0C" stroke-opacity="0.85"'
+            ' stroke-width="7" fill="none"/>')
+    return _card("#B24B2E", "#5A1E14", "#F2B27E", arcs + ball)
+
+
 def write(path, text):
     path.parent.mkdir(parents=True, exist_ok=True)
     path.write_text(text, encoding="utf-8")
@@ -135,10 +163,12 @@ def main():
 
     write(IMG / "ip-naruto.svg", naruto_card())
     write(IMG / "ip-chinese-mythology.svg", chinese_card())
+    write(IMG / "ip-fifa.svg", fifa_card())
+    write(IMG / "ip-nba.svg", nba_card())
     total = 0
     for ip in AVATAR_IPS:
         total += gen_avatars(ip)
-    print(f"wrote 2 IP cards + {total} character avatars under web/img/")
+    print(f"wrote 4 IP cards + {total} character avatars under web/img/")
 
 
 if __name__ == "__main__":

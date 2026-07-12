@@ -17,7 +17,7 @@ app = Flask(__name__, static_folder=str(WEB), static_url_path="")
 
 IPS = [
     {"id": "friends", "title": "Friends", "title_zh": "老友记",
-     "tagline": "Which of the six live in you?", "tagline_zh": "六个人里,你住着哪几个?",
+     "tagline": "Which of the six live in you?", "tagline_zh": "六个人里，你住着哪几个？",
      "image": "/img/ip-friends.jpg", "accent": "#C8553D"},
     {"id": "harry-potter", "title": "Harry Potter", "title_zh": "哈利·波特",
      "tagline": "Beyond the four houses.", "tagline_zh": "四个学院之外的你。",
@@ -28,6 +28,12 @@ IPS = [
     {"id": "naruto", "title": "Naruto", "title_zh": "火影忍者",
      "tagline": "Your ninja-team blend.", "tagline_zh": "你的忍者小队配比。",
      "image": "/img/ip-naruto.svg", "accent": "#E67E22"},
+    {"id": "fifa", "title": "Football Legends", "title_zh": "足球巨星",
+     "tagline": "Which legend runs in your veins?", "tagline_zh": "你骨子里住着哪位巨星？",
+     "image": "/img/ip-fifa.svg", "accent": "#2F9E55"},
+    {"id": "nba", "title": "NBA Stars", "title_zh": "NBA 球星",
+     "tagline": "Your courtside personality blend.", "tagline_zh": "你的球场人格配比。",
+     "image": "/img/ip-nba.svg", "accent": "#B24B2E"},
     # Coming soon — no artifacts yet, so _ip_available() reports them as coming_soon.
     {"id": "greek-mythology", "title": "Greek Mythology", "title_zh": "希腊神话",
      "tagline": "Olympians in your blood.", "tagline_zh": "你血脉里的奥林匹斯众神。",

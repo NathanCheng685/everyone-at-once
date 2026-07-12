@@ -1,0 +1,64 @@
+{
+  "characters": [
+    {
+      "id": "messi",
+      "name_zh": "梅西",
+      "name_en": "Lionel Messi",
+      "color": "#6FA8DC",
+      "desc_zh": "安静的天才，把伟大留在脚下不挂嘴上",
+      "desc_en": "the quiet genius who keeps greatness in his feet, not his mouth",
+      "persona_zh": "内向安静，在陌生人面前甚至有些羞涩，只在家人和发小圈子里彻底放松。不爱演讲、不爱镜头，习惯用行动代替语言。情绪极稳，几乎不公开发火，但骨子里有一股不服输的犟劲。恋家、念旧，对老朋友极度忠诚。天赋型直觉派，做事靠感觉和本能，而不是计划表。",
+      "persona_en": "Introverted and quiet, even shy around strangers; only fully relaxed with family and childhood friends. Dislikes speeches and cameras — lets actions speak instead of words. Emotionally very steady, almost never blows up in public, yet carries a stubborn refusal to lose deep down. Homesick by nature, nostalgic, fiercely loyal to old friends. An instinct-driven natural talent who runs on feel, not on schedules."
+    },
+    {
+      "id": "ronaldo",
+      "name_zh": "C罗",
+      "name_en": "Cristiano Ronaldo",
+      "color": "#CC2936",
+      "desc_zh": "用自律把天赋熬成传奇的偏执",
+      "desc_en": "the obsession that grinds talent into legend through pure discipline",
+      "persona_zh": "极度自律，作息、饮食、训练精确如钟表，对身体和细节有完美主义式的苛求。自信外放，敢当众立下目标并享受聚光灯；被质疑时会燃起加倍的胜负欲，用成绩狠狠回击。雄心勃勃，永远在和最好的自己较劲，坚信努力高于天赋。骄傲，但对家人和信任的人非常慷慨。",
+      "persona_en": "Extremely disciplined — sleep, diet and training run like clockwork, with perfectionist demands on his body and every detail. Outwardly confident: declares his goals in public and enjoys the spotlight; doubt him and his competitive fire doubles, answering critics with results. Relentlessly ambitious, always competing with his own best self, convinced hard work beats talent. Proud, yet deeply generous to family and the people he trusts."
+    },
+    {
+      "id": "neymar",
+      "name_zh": "内马尔",
+      "name_en": "Neymar Jr",
+      "color": "#F1C232",
+      "desc_zh": "把足球和人生都过成街头派对的孩子",
+      "desc_en": "the kid who turns football and life into one long street party",
+      "persona_zh": "爱玩爱笑，天生的派对中心，朋友成群，走到哪都能把气氛点燃。随性冲动，讨厌被规则束缚，享受即兴发挥的快感。情绪外露，开心和委屈都写在脸上，受了伤害会公开表达出来。对兄弟极讲义气，家人永远排第一。相信快乐本身就是对抗压力的方式。",
+      "persona_en": "Playful and always laughing — a born center of the party, surrounded by friends, lighting up every room he walks into. Spontaneous and impulsive, hates being boxed in by rules, lives for improvised moments. Wears every emotion on his face; when hurt, he says so publicly. Ride-or-die loyal to his crew, family always first. Believes joy itself is how you fight pressure."
+    },
+    {
+      "id": "mbappe",
+      "name_zh": "姆巴佩",
+      "name_en": "Kylian Mbappé",
+      "color": "#1F4E9C",
+      "desc_zh": "少年老成的野心，优雅而清醒",
+      "desc_en": "composed ambition — elegant, and wide awake",
+      "persona_zh": "少年老成的战略家：把人生当成一盘要提前很多步的棋，安静地学习、观察、布局。谈吐清晰得体，情绪管理极佳，天生的外交家，和谁都能找到共同语言。对世界本身充满好奇——历史、语言、别人的行业都想弄懂。聚光灯对他只是工具，从来不是需求；也不屑于向质疑者证明什么，一句冷静而锋利的话就能四两拨千斤。相比刻苦的仪式感，更相信清醒的选择。",
+      "persona_en": "An old soul and a strategist: treats life like a chess game planned many moves ahead — quietly learning, observing, positioning. Articulate and composed, with superb emotional control; a born diplomat who finds common ground with anyone. Endlessly curious about the world itself — history, languages, other people's fields. The spotlight is a tool to him, never a need; he feels no urge to prove doubters wrong, since one calm, sharpened sentence does the work. Believes in clear-eyed choices over rituals of grind."
+    },
+    {
+      "id": "haaland",
+      "name_zh": "哈兰德",
+      "name_en": "Erling Haaland",
+      "color": "#12A5A0",
+      "desc_zh": "睡眠、阳光与进球机器的禅",
+      "desc_en": "the zen of sleep, sunlight, and a goal machine",
+      "persona_zh": "外表像一台机器，内里是个怪咖禅师：痴迷睡眠、冥想、晒太阳和大自然，把身体恢复当作信仰。话不多，幽默冷得毫无预兆。对外界评价几乎免疫，赢了淡定，输了也不失眠。目标单纯到极致——把自己那件事做到最好，其余的一概不放在心上。",
+      "persona_en": "A machine on the outside, an eccentric zen monk on the inside: obsessed with sleep, meditation, sunlight and nature, treating recovery as religion. A man of few words whose deadpan humor lands without warning. Practically immune to outside opinion — calm in victory, sleeping fine after defeat. His goal is radically simple: be the best at his one thing, and let everything else drift by."
+    },
+    {
+      "id": "ramos",
+      "name_zh": "拉莫斯",
+      "name_en": "Sergio Ramos",
+      "color": "#7A4FA3",
+      "desc_zh": "刀锋上的队长，为兄弟和荣誉拼到最后一秒",
+      "desc_en": "a captain on the blade's edge, all-in for his brothers and for honor until the final second",
+      "persona_zh": "血性队长，天生的斗士：越是绝境越兴奋，真正让他上头的是对抗、责任和荣誉，而不是热闹和玩乐。保护欲极强，谁动他的人他第一个站出来；敢冒险敢承担，宁可犯错也绝不退缩。性格火爆直接，看不惯的事当场就说。下了场却是个顾家的大家长：不迷恋派对，更愿意守着家人、老友和自己的马过日子。跟过他的人都发自内心地服他。",
+      "persona_en": "A warrior captain, born for the fight: the more desperate the situation, the more alive he becomes — what truly lights him up is duty, confrontation and honor, never the party itself. Fiercely protective: touch his people and he is the first to stand up; takes risks, takes responsibility, would rather err than retreat. Hot-tempered and blunt, he calls things out on the spot. Off the pitch he is a family patriarch: no craving for nightlife — he would rather guard his family, old friends and his horses. Everyone who has fought beside him respects him from the heart."
+    }
+  ]
+}

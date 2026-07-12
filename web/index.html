@@ -4,6 +4,11 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
 <title>EveryoneAtOnce — which characters live in you?</title>
+<meta name="description" content="You're never just one. Pick a universe — Friends, Harry Potter, Avengers, Naruto, football legends, NBA stars — and discover your probabilistic personality blend." />
+<meta property="og:title" content="EveryoneAtOnce — which characters live in you?" />
+<meta property="og:description" content="Answer 12 everyday questions and get your probabilistic personality blend across your favorite universes." />
+<meta property="og:type" content="website" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Ctext y='.9em' font-size='90'%3E%F0%9F%8E%AD%3C/text%3E%3C/svg%3E" />
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
@@ -102,6 +107,8 @@
   .verdict{font-family:var(--serif); font-weight:500; font-size:clamp(28px,5vw,42px); line-height:1.08; margin:4px 0 2px; letter-spacing:-.01em}
   .verdict em{font-style:normal; color:var(--accent)}
   .subverdict{font-size:16px; color:#4a4742}
+  .chip{display:inline-block; background:color-mix(in srgb, var(--accent) 13%, #fff); color:var(--accent);
+    font-weight:600; font-size:14px; padding:3px 10px; border-radius:99px}
   .descline{font-size:15px; color:var(--muted); margin:14px 0 24px}
   .bars{display:flex; flex-direction:column; gap:13px}
   .bar{display:grid; grid-template-columns:34px 1fr; gap:12px; align-items:center}
@@ -144,22 +151,27 @@ const T = {
     submit_p:"Tell us a show, movie, or book — we'll build the test and publish it within a day.",
     submit_ph:"e.g. Harry Potter · Succession · One Piece",
     submit_btn:"Request it", submit_ok:(n,d)=>`Thanks — we'll have “${n}” ready around ${d}.`,
-    mostly:"You're mostly", with:"with a streak of",
-    conf_hi:"Your answers point to a clear lead.",
-    conf_mid:"A leading character — but you're a real blend.",
-    conf_lo:"Remarkably balanced: a true ensemble."},
+    loading:"Inferring your personality blend…",
+    mostly:"You're mostly", with:"with a streak of", match:"match",
+    blend:"Your blend", share:"Share result", copied:"Copied!",
+    share_line:(n,p)=>`I'm ${p}% ${n} on EveryoneAtOnce — which characters live in you?`,
+    conf_hi:"Your answers point straight at one dominant character.",
+    conf_mid:"A leading character rises above a real blend.",
+    conf_lo:"Remarkably balanced: a true ensemble cast."},
   zh:{begin:"开始", q:"第", of:"/", back:"上一题", retake:"换个宇宙再测",
-    home_h:"你心里住着<br>哪些角色?",
-    home_lede:"你从来不只是一个人。选一个宇宙,看看你的人格混合——或者提交你想要的作品。",
-    choose:"选择一个宇宙", soon:"即将", play:"开始",
-    submit_h:"没有你想要的?",
+    home_h:"你心里住着<br>哪些角色？",
+    home_lede:"你从来不只是一个人。选一个宇宙，看看你的人格混合——或者提交你想要的作品。",
+    choose:"选择一个宇宙", soon:"即将", play:"开始", loading:"正在推断你的人格构成…",
+    submit_h:"没有你想要的？",
     submit_p:"告诉我们一部剧、电影或书——我们一天内做好并上线。",
     submit_ph:"比如 哈利波特 · 继承之战 · 海贼王",
     submit_btn:"提交", submit_ok:(n,d)=>`收到——“${n}” 大约 ${d} 上线。`,
-    mostly:"你最像", with:"还带着一点",
-    conf_hi:"你的答案指向一个明显的主导角色。",
-    conf_mid:"有主导角色——但你是真正的混合体。",
-    conf_lo:"出奇地均衡:一个名副其实的群像。"}
+    mostly:"你最像", with:"还带着一点", match:"契合度",
+    blend:"你的人格构成", share:"分享结果", copied:"已复制!",
+    share_line:(n,p)=>`我在 EveryoneAtOnce 测出 ${p}% 像${n}——你心里住着哪些角色?`,
+    conf_hi:"你的答案清晰地指向一个主导角色。",
+    conf_mid:"有一个角色领跑——但你是真正的混合体。",
+    conf_lo:"出奇地均衡：一个名副其实的群像。"}
 };
 
 let LANG='en', LANGS=['en'], IPS=[], QS=[], ANS=[], idx=0, curIP=null;
@@ -215,13 +227,16 @@ function home(){
     const playable = ip.status==='available';
     const title = (LANG==='zh' && ip.title_zh) ? ip.title_zh : ip.title;
     const tag = (LANG==='zh' && ip.tagline_zh) ? ip.tagline_zh : ip.tagline;
-    const c=$(`<div class="ipcard ${playable?'play':'soon'}" ${playable?'':`data-soon="${t.soon}"`}>
+    const c=$(`<div class="ipcard ${playable?'play':'soon'}" ${playable?'role="button" tabindex="0"':`data-soon="${t.soon}"`}>
       <div class="thumb"><img alt="${title}" src="${ip.image}"></div>
       <div class="body"><div class="t">${title}</div><div class="tag">${tag}</div></div>
       ${playable?`<span class="badge">${t.play}</span>`:''}
     </div>`);
     fallback(c.querySelector('img'), ip.accent||'#bbb');
-    if(playable) c.onclick=()=>openIP(ip);
+    if(playable){
+      c.onclick=()=>openIP(ip);
+      c.onkeydown=(e)=>{ if(e.key==='Enter'||e.key===' '){ e.preventDefault(); openIP(ip); } };
+    }
     grid.appendChild(c);
   });
   v.querySelector('#reqbtn').onclick=submitIP;
@@ -253,9 +268,10 @@ async function openIP(ip){
 function question(){
   const t=T[LANG], q=QS[idx];
   root.innerHTML='';
+  const ipTitle = (LANG==='zh' && curIP.title_zh) ? curIP.title_zh : curIP.title;
   const v=$(`<div class="stage"><div class="narrow screen">
     <div class="progress"><i></i></div>
-    <div class="qcount">${t.q} ${idx+1} ${t.of} ${QS.length}</div>
+    <div class="qcount">${ipTitle} · ${t.q} ${idx+1} ${t.of} ${QS.length}</div>
     <div class="scenario">${q.scenario}</div>
     <div class="opts"></div>
     <div class="navrow"><button class="back" ${idx===0?'hidden':''}>${t.back}</button></div>
@@ -277,7 +293,7 @@ function select(i){
   setTimeout(()=>{ if(idx<QS.length-1){ idx++; question(); } else { finish(); } }, 260);
 }
 async function finish(){
-  root.innerHTML='<div class="stage"><div class="narrow screen"><p class="loading">…</p></div></div>';
+  root.innerHTML='<div class="stage"><div class="narrow screen"><p class="loading">'+T[LANG].loading+'</p></div></div>';
   let res;
   try{ res=await (await fetch('/api/infer',{method:'POST',headers:{'Content-Type':'application/json'},
     body:JSON.stringify({ip:curIP.id, lang:LANG, answers:ANS})})).json(); }
@@ -286,9 +302,13 @@ async function finish(){
   result(res);
 }
 function result(res){
-  const t=T[LANG], mix=res.mix, top=mix[0], second=mix[1];
-  const ratio=top.mean/(second.mean||1e-9);
-  const conf= ratio>1.7 ? t.conf_hi : (ratio>1.2 ? t.conf_mid : t.conf_lo);
+  const t=T[LANG], mix=res.mix;
+  const dom=res.dominant || mix.map(m=>({...m, p_dom:m.mean}));
+  const top=dom[0];
+  const second=mix.find(m=>m.id!==top.id) || dom[1];
+  const pTop=Math.round((top.p_dom??top.mean)*100);
+  const pSecond=Math.round(second.mean*100);
+  const conf= pTop>=55 ? t.conf_hi : (pTop>=30 ? t.conf_mid : t.conf_lo);
   root.innerHTML='';
   const v=$(`<div class="stage"><div class="narrow screen">
     <div class="rhead">
@@ -296,16 +316,21 @@ function result(res){
       <div>
         <div class="rkicker">${t.mostly}</div>
         <div class="verdict"><em>${nm(top)}</em></div>
-        <div class="subverdict">${Math.round(top.mean*100)}% · ${t.with} ${nm(second)} (${Math.round(second.mean*100)}%)</div>
+        <div class="subverdict"><span class="chip">${t.match} ${pTop}%</span> · ${t.with} ${nm(second)} (${pSecond}%)</div>
       </div>
     </div>
     <div class="descline">${top.desc||charDesc(top.id)}</div>
+    <div class="sectlabel" style="margin:26px 0 14px">${t.blend}</div>
     <div class="bars"></div>
     <div class="note">${conf}</div>
-    <div class="navrow" style="justify-content:center"><button class="btn ghost" id="retake">${t.retake}</button></div>
+    <div class="navrow" style="justify-content:center; gap:12px">
+      <button class="btn ghost" id="share">${t.share}</button>
+      <button class="btn ghost" id="retake">${t.retake}</button>
+    </div>
   </div></div>`);
   fallback(v.querySelector('.avatar'), charColor(top.id));
   const bars=v.querySelector('.bars');
+  const maxMean = Math.max(...mix.map(m=>m.mean), 1e-9);
   mix.forEach(m=>{
     const pct=Math.round(m.mean*100);
     const b=$(`<div class="bar">
@@ -317,8 +342,16 @@ function result(res){
     </div>`);
     fallback(b.querySelector('.av'), charColor(m.id));
     bars.appendChild(b);
-    requestAnimationFrame(()=>{ b.querySelector('.fill').style.width=Math.max(2,m.mean*100)+'%'; });
+    requestAnimationFrame(()=>{ b.querySelector('.fill').style.width=Math.max(2,m.mean/maxMean*100)+'%'; });
   });
+  v.querySelector('#share').onclick=async (e)=>{
+    const text=t.share_line(nm(top), pTop)+' '+location.origin;
+    try{
+      if(navigator.share){ await navigator.share({text}); }
+      else{ await navigator.clipboard.writeText(text); e.target.textContent=t.copied;
+        setTimeout(()=>{ e.target.textContent=t.share; }, 1600); }
+    }catch(_){}
+  };
   v.querySelector('#retake').onclick=home;
   root.appendChild(v);
 }

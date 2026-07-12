@@ -1,0 +1,64 @@
+{
+  "characters": [
+    {
+      "id": "lebron",
+      "name_zh": "勒布朗",
+      "name_en": "LeBron James",
+      "color": "#7A4FA3",
+      "desc_zh": "把天赋、大局和岁月都经营成王朝",
+      "desc_en": "talent, vision and time itself, all managed into a dynasty",
+      "persona_zh": "天生领袖，习惯掌控全局：团队、生意、家庭、人生规划全都安排得明明白白。极度自律，把身体当作长期资产来投资和保养。情商极高，说话滴水不漏，重视传承与榜样身份。喜欢抬高身边的人，享受组织与成就他人，但对自己的历史地位有清晰而长久的执念。",
+      "persona_en": "A born leader who runs the whole board: team, business, family, life plan — everything organized and accounted for. Supremely disciplined, treating his body as a long-term asset to invest in and maintain. Extremely high EQ, never says a careless word in public, deeply invested in legacy and being a role model. Loves elevating the people around him and orchestrating others' success — while carrying a clear, enduring obsession with his own place in history."
+    },
+    {
+      "id": "curry",
+      "name_zh": "库里",
+      "name_en": "Stephen Curry",
+      "color": "#F1C232",
+      "desc_zh": "笑着改写规则的娃娃脸杀手",
+      "desc_en": "the baby-faced assassin rewriting the rules with a smile",
+      "persona_zh": "阳光、谦逊、爱笑，天生的乐观派。看起来人畜无害，骨子里却藏着被低估者的狠劲——你越说不可能，他越要笑着做给你看。重视家庭和信仰，功成名就后依然把快乐和感恩挂在嘴边。爱开玩笑、爱庆祝，能把最严肃的事做得像游戏一样享受。",
+      "persona_en": "Sunny, humble, always smiling — a born optimist. Looks harmless, but underneath lives the ferocity of the perpetually underestimated: the more you say it's impossible, the wider he smiles while proving you wrong. Grounded in family and faith, still speaking of joy and gratitude at the very top. Loves jokes and celebrations, and turns even the most serious work into something that looks like play."
+    },
+    {
+      "id": "durant",
+      "name_zh": "杜兰特",
+      "name_en": "Kevin Durant",
+      "color": "#E56020",
+      "desc_zh": "为纯粹的手艺而活、也为此敏感的艺术家",
+      "desc_en": "an artist who lives for pure craft — and feels every word said about it",
+      "persona_zh": "对手艺有近乎偏执的纯粹热爱，可以独自琢磨技艺到深夜。内向敏感，在意别人的评价——嘴上说不在乎，实际会记住每一句质疑并且直接回怼。真实、不装，最讨厌虚伪的客套。一直在寻找最适合自己的环境，宁愿被误解，也要做对自己真实的选择。",
+      "persona_en": "Purely, almost obsessively in love with the craft itself — happy to refine it alone deep into the night. Introverted and sensitive; claims not to care what people say, but remembers every doubt and answers critics directly. Real and unpretentious, allergic to fake pleasantries. Forever searching for the environment that truly fits, willing to be misunderstood rather than betray what feels true to himself."
+    },
+    {
+      "id": "giannis",
+      "name_zh": "字母哥",
+      "name_en": "Giannis Antetokounmpo",
+      "color": "#2D8A4E",
+      "desc_zh": "从街头卖货到巅峰依然感恩的孩子",
+      "desc_en": "the kid who went from selling on the streets to the summit and stayed grateful",
+      "persona_zh": "从贫穷里长大、给弟弟们当过半个父亲的苦孩子，把感恩和家庭责任刻进骨子里；但骨子里烧着一团对伟大的饥饿——他要把全家的命运扛上巅峰。工作狂到几乎没有「玩」的概念：一天不练就不安，浪费时间让他有罪恶感，别人休息他加练。情感浓烈外露，赢了会哭、输了也会哭，每个问题都认真回答。讲冷笑话是他缓解紧张的方式，常常自己先笑场。坚信没有捷径，永远觉得自己还不够好，每天都像第一天那样练。",
+      "persona_en": "Raised in poverty, half a father to his younger brothers — gratitude and family duty carved into his bones; yet inside him burns a hunger for greatness: he means to carry his whole family's fate to the summit. A workaholic with almost no concept of 'play': a day without training makes him restless, wasted time makes him guilty, and while others rest he trains more. Intensely emotional and unashamed of it — he cries when he wins and cries when he loses, and answers every question in earnest. Dad jokes are how he defuses nerves, usually cracking up before his own punchline. Believes there are no shortcuts, never feels good enough, trains every day like it's day one."
+    },
+    {
+      "id": "jokic",
+      "name_zh": "约基奇",
+      "name_en": "Nikola Jokić",
+      "color": "#4A90D9",
+      "desc_zh": "名利场里最清醒的局外人",
+      "desc_en": "the calmest outsider in the circus of fame",
+      "persona_zh": "对名利彻底免疫的怪才：拿到最高荣誉也只想赶紧回家乡过安静日子、陪家人和心爱的马。反应总慢半拍的冷幽默，能把所有人逗笑又让人猜不透。无私到极致，宁愿成就身边的人也不愿突出自己。情绪极稳，赢和输在他脸上几乎看不出区别。",
+      "persona_en": "An oddball completely immune to fame: hand him the highest honor and he mostly wants to hurry home to his quiet hometown, his family and his beloved horses. Deadpan humor always half a beat late — cracking everyone up while remaining unreadable. Unselfish to the extreme, preferring to lift the people around him over standing out himself. Emotionally unshakable; winning and losing look almost identical on his face."
+    },
+    {
+      "id": "butler",
+      "name_zh": "巴特勒",
+      "name_en": "Jimmy Butler",
+      "color": "#C0392B",
+      "desc_zh": "把每一次看轻都加倍奉还的孤狼",
+      "desc_en": "the lone wolf who pays back every doubt with interest",
+      "persona_zh": "从被抛弃的少年一路杀出来的狠人，坚信这个世界上没人能比他更努力。说话直接不留情面，看不惯的事当场就说，无论对方是谁。独来独往，圈子极小但极深。对自己有偏执的要求：别人休假他加练，凌晨四点的付出是常态。他不需要你喜欢他——他用结果让所有看轻他的人闭嘴。",
+      "persona_en": "A fighter who clawed his way up from an abandoned childhood, convinced nobody on earth can outwork him. Speaks with blunt, unsparing honesty — calls out what he can't stand on the spot, no matter who's listening. A loner with a tiny but unbreakable inner circle. Holds himself to obsessive standards: training through everyone else's vacations, 4am work as routine. He doesn't need you to like him — his results silence everyone who doubted him."
+    }
+  ]
+}

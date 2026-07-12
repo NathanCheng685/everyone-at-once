@@ -6,7 +6,7 @@ ROOT = Path(__file__).resolve().parent
 IPS_DIR = ROOT / "ips"
 ARTIFACTS = ROOT / "artifacts"
 
-PLAYABLE_IPS = ("friends", "harry-potter", "avengers", "naruto")
+PLAYABLE_IPS = ("friends", "harry-potter", "avengers", "naruto", "fifa", "nba")
 
 
 def ip_dir(ip_id):

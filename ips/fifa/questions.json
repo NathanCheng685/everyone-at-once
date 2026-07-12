@@ -1,0 +1,184 @@
+{
+  "questions": [
+    {
+      "id": 1,
+      "scenario_zh": "周五傍晚刚下班，最想做的是？",
+      "scenario_en": "It's Friday at 6pm, you just finished work — what do you most want to do?",
+      "options_zh": [
+        "按计划完成今晚的锻炼和恢复流程，然后准时上床睡觉",
+        "叫上一大群朋友，去最热闹的地方玩到尽兴",
+        "回家陪家人或最熟的几个人，安安静静吃顿饭"
+      ],
+      "options_en": [
+        "Complete tonight's workout and recovery routine as planned, then get to bed on time",
+        "Round up a big group of friends and hit the liveliest place in town",
+        "Go home to family or your closest few people and share a quiet dinner"
+      ]
+    },
+    {
+      "id": 2,
+      "scenario_zh": "最好的朋友凌晨两点哭着打电话来，说刚被分手。你的第一反应是？",
+      "scenario_en": "Your closest friend calls you at 2am, crying — they just got dumped. What's your first move?",
+      "options_zh": [
+        "什么都不多问，安静听完，告诉他：我一直都在",
+        "先骂那个伤害他的人一顿，然后马上打车过去陪他",
+        "帮他把事情理清楚，冷静给出接下来该怎么办的建议"
+      ],
+      "options_en": [
+        "Ask nothing, just listen quietly to the end, then tell them: I'm here, always",
+        "Curse out whoever hurt them first, then grab a cab and go be with them right now",
+        "Help them sort out what happened and calmly lay out what to do next"
+      ]
+    },
+    {
+      "id": 3,
+      "scenario_zh": "会议上你的方案被领导当众说\"逻辑不通\"，你的反应是？",
+      "scenario_en": "In a meeting, your boss publicly says your proposal 'doesn't make logical sense.' Your reaction?",
+      "options_zh": [
+        "当场沉住气不争辩，之后拿出一版无可挑剔的成果让他收回这句话",
+        "当场回应，条理清晰、寸步不让地把方案捍卫到底",
+        "耸耸肩不往心里去，该改就改，心情完全不受影响"
+      ],
+      "options_en": [
+        "Hold steady and say nothing — then come back with work so flawless he has to take it back",
+        "Respond on the spot: defend the proposal point by point without giving an inch",
+        "Shrug it off completely — fix what needs fixing, mood untouched"
+      ]
+    },
+    {
+      "id": 4,
+      "scenario_zh": "你突然收到一笔 5 万块的意外奖金，第一反应是？",
+      "scenario_en": "An unexpected bonus drops into your account. What's your gut move?",
+      "options_zh": [
+        "投进长期规划里——投资自己、布局未来，钱要为目标服务",
+        "给家人买点东西，剩下的存起来，日子照旧",
+        "请兄弟们痛快庆祝一场，钱就是拿来制造快乐的"
+      ],
+      "options_en": [
+        "Put it into the long game — invest in yourself and your future plans; money serves the goal",
+        "Buy something for family, save the rest, and carry on exactly as before",
+        "Throw a proper celebration for your crew — money exists to make joy"
+      ]
+    },
+    {
+      "id": 5,
+      "scenario_zh": "第一次约会，你倾向于怎么安排？",
+      "scenario_en": "First date — how do you want to set it up?",
+      "options_zh": [
+        "提前把每个环节都安排到位，让对方看到最好状态的你",
+        "带对方去好玩的地方，让气氛自己热起来，笑声不断",
+        "找家简单熟悉的小馆子，自然、舒服、聊得来最重要"
+      ],
+      "options_en": [
+        "Plan every detail in advance so they see you at your absolute best",
+        "Take them somewhere fun and let the vibe build itself — nonstop laughter",
+        "A simple familiar little place — natural, comfortable, good conversation above all"
+      ]
+    },
+    {
+      "id": 6,
+      "scenario_zh": "室友把你冰箱里准备明天招待客人的食材提前吃掉了。你的反应是？",
+      "scenario_en": "Your roommate ate the food you were saving in the fridge for tomorrow's guests. Your reaction?",
+      "options_zh": [
+        "当场发火说清楚：这不行，今晚就得补回来",
+        "无所谓，笑着损他两句，改点外卖照样招待",
+        "平静地讲清楚下次的规矩，然后自己想办法补救"
+      ],
+      "options_en": [
+        "Call it out on the spot: not okay — replace it tonight",
+        "No big deal — roast them a little, order delivery, the guests will be fine",
+        "Calmly set the rule for next time, then quietly sort out a fix yourself"
+      ]
+    },
+    {
+      "id": 7,
+      "scenario_zh": "派对上你被介绍给一个看起来很有趣的陌生人，你的开场是？",
+      "scenario_en": "At a party, you get introduced to someone who looks interesting. Your opener?",
+      "options_zh": [
+        "几句话就跟对方玩到一起，像认识了很多年的老友",
+        "大方得体地聊，自信展示自己，也把对方的故事聊出来",
+        "礼貌微笑，话不多，更多时候在安静地听"
+      ],
+      "options_en": [
+        "Within a few sentences you're joking around like friends of many years",
+        "Chat with easy confidence — present yourself well and draw out their story too",
+        "Smile politely, say little, mostly just listen"
+      ]
+    },
+    {
+      "id": 8,
+      "scenario_zh": "最好的朋友突然出大事，半夜来找你帮忙。你的第一反应是？",
+      "scenario_en": "Your best friend hits a sudden crisis and shows up at your door at midnight. First move?",
+      "options_zh": [
+        "先问清楚是谁的事——要出头我第一个上，天塌下来我先扛",
+        "让他先冷静，把事实一条条理清楚，当场列出行动计划",
+        "先把人安顿好：吃的、热水、铺好的床，其他明天再说"
+      ],
+      "options_en": [
+        "First find out who did this — if someone needs to step up, I'm first in line",
+        "Calm them down, walk through the facts one by one, and draw up an action plan on the spot",
+        "Settle them in first — food, something warm, a made-up bed; the rest can wait until morning"
+      ]
+    },
+    {
+      "id": 9,
+      "scenario_zh": "你最讨厌的人意外升职了。你心里的第一反应是？",
+      "scenario_en": "Someone you can't stand just got promoted. Your first internal reaction?",
+      "options_zh": [
+        "燃起一股狠劲：好，那我就做得更好，让所有人都看见",
+        "跟我没关系，我的目标在更远的地方，不为这种事分心",
+        "找朋友吐槽一顿，笑一笑，然后该干嘛干嘛"
+      ],
+      "options_en": [
+        "A fire lights up: fine — I'll just do better, and make sure everyone sees it",
+        "Irrelevant to me — my goals are much further away; not worth the distraction",
+        "Vent to friends, have a laugh about it, then back to living"
+      ]
+    },
+    {
+      "id": 10,
+      "scenario_zh": "想象十年后的自己，你最希望的画面是？",
+      "scenario_en": "Picture yourself ten years from now — what's the version you most hope for?",
+      "options_zh": [
+        "站在行业之巅，名字被所有人记住，还在向新的领域扩张",
+        "和家人在安静的地方生活，作息规律，守着自然和自己爱的一切",
+        "带着一帮老兄弟把日子过成节日，走到哪儿都是笑声"
+      ],
+      "options_en": [
+        "At the very top of the field — a name everyone knows, still expanding into new territory",
+        "A quiet life with family and steady routines, close to nature and everything you truly love",
+        "Turning life into one long festival with the same old crew — laughter wherever you go"
+      ]
+    },
+    {
+      "id": 11,
+      "scenario_zh": "凌晨三点你毫无征兆地醒了，再也睡不着。你最可能做什么？",
+      "scenario_en": "It's 3am and you're suddenly wide awake. Most likely move?",
+      "options_zh": [
+        "启动自己的一套入睡流程重新入睡——睡眠神圣不可侵犯",
+        "拿起手机看看消息，跟还没睡的朋友聊上两句",
+        "干脆想想事情——最近的目标、下一步的打算，想通了再睡"
+      ],
+      "options_en": [
+        "Run your wind-down routine and get back to sleep — sleep is sacred",
+        "Check your phone and chat a bit with whichever friends are still up",
+        "Might as well think — recent goals, next moves; sleep comes once it's sorted"
+      ]
+    },
+    {
+      "id": 12,
+      "scenario_zh": "部门年会需要有人上台表演节目，大家的目光突然都投向你。你的反应是？",
+      "scenario_en": "The office party needs someone to perform on stage, and suddenly every head turns to you. Your reaction?",
+      "options_zh": [
+        "来！我早就等着这一刻——聚光灯打过来，上台就是我的主场",
+        "使劲推辞，实在躲不掉就红着脸快速来一个，马上把话筒交出去",
+        "行，但一个人上多没意思——把兄弟们全拉上台，变成集体节目一起闹"
+      ],
+      "options_en": [
+        "Yes! I've been waiting for this — hit the lights, that stage is my home turf",
+        "Deflect hard; if truly cornered, do something quick while blushing and hand the mic right back",
+        "Fine — but solo is boring: drag the whole crew up and turn it into a group act"
+      ]
+    }
+  ]
+}

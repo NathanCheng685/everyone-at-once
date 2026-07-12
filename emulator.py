@@ -61,12 +61,21 @@ class ResponseEmulator:
             kernel=kernel, normalize_y=True, n_restarts_optimizer=3, alpha=1e-6,
         )
 
-    def fit(self, npz_path=None):
+    def fit(self, npz_path=None, augment_corners=True):
         if npz_path is None:
             npz_path = artifacts_dir(self.ip_id) / f"response_surface_{self.lang}.npz"
         data = np.load(npz_path, allow_pickle=True)
         self.thetas = data["thetas"]            # (N, 6)
         self.probs = data["probs"]              # (N, 12, 3)
+        # The surface has ONE simulator sample per (theta, q); corners are the
+        # highest-signal region, so fold in the sanity tensor's independent
+        # corner measurements as extra training rows (2x samples at corners).
+        sanity = artifacts_dir(self.ip_id) / "sanity_tensor.npy"
+        if augment_corners and sanity.exists():
+            tensor = np.load(sanity)            # (6, 12, 2, 3)
+            li = ["zh", "en"].index(self.lang)
+            self.thetas = np.vstack([self.thetas, np.eye(6)])
+            self.probs = np.vstack([self.probs, tensor[:, :, li, :]])
         self.gprs = []
         # Kernel hyperparams hitting bounds is expected for small N; not fatal.
         with warnings.catch_warnings():

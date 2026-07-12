@@ -1,0 +1,15 @@
+[Unit]
+Description=EveryoneAtOnce web app
+After=network.target
+
+[Service]
+User=eao
+Group=eao
+WorkingDirectory=/opt/eao/app
+Environment=PORT=8000
+ExecStart=/opt/eao/app/.venv/bin/gunicorn app:app --bind 127.0.0.1:8000 --workers 1 --threads 4 --timeout 120
+Restart=on-failure
+RestartSec=5
+
+[Install]
+WantedBy=multi-user.target

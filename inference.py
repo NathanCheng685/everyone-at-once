@@ -9,7 +9,7 @@ so diffuse/over-concentrated cases are visible rather than hidden.
 """
 import numpy as np
 
-from prompts import CHARACTERS
+from ip_loader import load_characters
 
 N_CHARS = 6
 
@@ -54,14 +54,15 @@ def infer(answers, emu, alpha=0.5, M=50000, seed=0):
     }
 
 
-def summarize(res, lang="zh"):
+def summarize(res, lang="zh", ip_id="friends", characters=None):
+    characters = characters or load_characters(ip_id)
     name_key = f"name_{lang}" if lang in ("zh", "en") else "name_zh"
     lines = []
     lines.append(f"ESS = {res['ess']:.0f} / {res['M']}  "
                  f"({'diffuse' if res['ess'] > res['M'] * 0.3 else 'concentrated'})")
     lines.append("posterior mix (mean [90% CI]):")
     for c in res["order"]:
-        nm = CHARACTERS[c][name_key]
+        nm = characters[c][name_key]
         mean = res["post_mean"][c] * 100
         lo = res["q05"][c] * 100
         hi = res["q95"][c] * 100
